@@ -1,5 +1,5 @@
 # All programms needed to create a "Desktop Enviroment"
-{ config, pkgs, ...}:
+{ config, pkgs, inputs, ...}:
 {
   # Enable Hyprland
   programs.hyprland = {

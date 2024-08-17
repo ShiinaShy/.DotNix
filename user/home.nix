@@ -29,6 +29,10 @@
     # Set Config Files:
     home.file.".config/hypr/hyprpaper.conf".source = ../configs/hypr/hyprpaper.conf;
     home.file.".config/hypr/hyprland.conf".source = ../configs/hypr/hyprland.conf;
+    home.file.".icons/McMojave" = {
+      source = ../configs/hypr/McMojave;
+      recursive = true;
+    };
     # The state version is required and should stay at the version you originally installed.
     home.stateVersion = "23.11";
   };
