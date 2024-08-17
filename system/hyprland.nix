@@ -1,4 +1,4 @@
-# All programms needed to create a Desktop Enviroment
+# All programms needed to create a "Desktop Enviroment"
 { config, pkgs, ...}:
 {
   # Enable Hyprland
