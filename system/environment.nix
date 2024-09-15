@@ -4,6 +4,8 @@
   environment.systemPackages = with pkgs; [
     zig
     zls
-    zed-editor
+    nixd
+    #zed-editor
+    (zed-editor.fhsWithPackages (pkgs: [ pkgs.zlib ]))
   ];
 }
