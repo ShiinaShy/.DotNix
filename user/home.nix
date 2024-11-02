@@ -23,6 +23,7 @@
       settings = {
         "general.autoScroll" = true;
         "browser.toolbars.bookmarks.visibility" = "newtab";
+        "browser.compactmode.show" = true;
       };
     };
 
