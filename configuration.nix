@@ -79,7 +79,9 @@
   # System Fonts
   fonts.packages = with pkgs; [
     font-awesome
-    (nerdfonts.override { fonts = [ "FiraCode" "ProFont" ]; })
+    nerd-fonts.fira-code
+    nerd-fonts.profont
+    #(nerdfonts.override { fonts = [ "FiraCode" "ProFont" ]; })
   ];
 
    # List services that you want to enable:
