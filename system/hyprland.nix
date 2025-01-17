@@ -6,9 +6,12 @@
   #boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
 
   # Enable Hyprland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
+  programs = {
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+    };
+    #hyprlock.enable = true; for future laptop use
   };
   # Electron use Wayland
   environment.sessionVariables = {
@@ -18,6 +21,9 @@
   environment.systemPackages = with pkgs; [
     glib #maybe some day i find out why past me added it here :3c
     waybar
+    eww
+    jq #for eww scripts
+    socat #for eww scripts
     pywal
     hyprpaper
     rofi-wayland
