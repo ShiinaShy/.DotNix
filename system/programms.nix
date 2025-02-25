@@ -7,7 +7,6 @@
   environment.systemPackages = with pkgs; [
     firefox
     librewolf
-    kate
     alacritty
     (pkgs.discord.override { withOpenASAR = true;})
     webcord
