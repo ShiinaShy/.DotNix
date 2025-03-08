@@ -9,6 +9,5 @@
     librewolf
     alacritty
     (pkgs.discord.override { withOpenASAR = true;})
-    webcord
   ];
 }
