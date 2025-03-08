@@ -4,9 +4,9 @@
 {
   imports = [
     #./user/home.nix
-    ./user/system/hyprland.nix
-    ./user/system/utils.nix
-    ./user/system/programms.nix
-    ./user/system/environment.nix
+    ./system/hyprland.nix
+    ./system/utils.nix
+    ./system/programms.nix
+    ./system/environment.nix
   ];
 }
