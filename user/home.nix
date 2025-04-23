@@ -30,6 +30,11 @@
     # Set Config Files:
     home.file.".config/hypr/hyprpaper.conf".source = ../configs/hypr/hyprpaper.conf;
     home.file.".config/hypr/hyprland.conf".source = ../configs/hypr/hyprland.conf;
+    home.file.".config/GIMP/3.0" = {
+      source =  ../configs/GIMP;
+      recursive = true;
+    };
+
     home.file.".icons/McMojave" = {
       # copy of McMojave stored in .DotNix | could've used flake but didn't like it due to unnececary complexity
       # not happy either but maybe can find better solution in future :3

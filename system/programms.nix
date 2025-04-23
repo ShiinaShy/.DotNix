@@ -8,6 +8,7 @@
     firefox
     librewolf
     alacritty
+    gimp3
     (pkgs.discord.override { withOpenASAR = true;})
   ];
 }
