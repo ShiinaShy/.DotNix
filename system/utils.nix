@@ -1,5 +1,5 @@
 # Different tools and utilities :3
-{ config, pkgs, ...}:
+{ pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
     lsof
@@ -8,10 +8,10 @@
     vulkan-tools
     wget
     git
-    neofetch
     rsclock
-    gotop
+    fastfetch
     lm_sensors
+    btop
     killall
   ];
 }

@@ -24,7 +24,8 @@
     eww
     jq #for eww scripts
     socat #for eww scripts
-    pywal
+    pywal16
+    imagemagick #for pywal16
     hyprpaper
     rofi-wayland
     xdg-desktop-portal-gtk

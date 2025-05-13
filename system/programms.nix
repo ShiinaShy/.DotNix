@@ -1,8 +1,10 @@
 # Main Programms used :3
-{ config, pkgs, ...}:
+{ pkgs, ...}:
 {
-  #Fix Nautilus Stuff
+  # Fix Nautilus Stuff
   services.gvfs.enable = true;
+  # Enable KDEConnect
+  programs.kdeconnect.enable = true;
 
   environment.systemPackages = with pkgs; [
     firefox
