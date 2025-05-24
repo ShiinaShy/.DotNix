@@ -11,6 +11,7 @@
     librewolf
     alacritty
     gimp3
+    keepassxc
     (pkgs.discord.override { withOpenASAR = true;})
   ];
 }

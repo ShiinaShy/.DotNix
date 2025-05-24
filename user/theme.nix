@@ -1,7 +1,7 @@
 # GTK Config
 { config, lib, pkgs, ...}:
 {
-  home-manager.users.shiina =
+  home-manager.users.shiina = {config, ...}:
     let
         adw-color = "@import '/home/shiina/.cache/wal/colors-gtk.css';";
     in
@@ -26,5 +26,14 @@
         style.name = "kvantum";
         # style.package = pkgs.adwaita-qt;
       };
+
+      home.file.".config/wal/templates" = {
+        source =  ../configs/wal/templates;
+        recursive = true;
+      };
+      home.file.".config/Kvantum/pywal/pywal.kvconfig".source = config.lib.file.mkOutOfStoreSymlink "/home/shiina/.cache/wal/pywal.kvconfig";
+      home.file.".config/Kvantum/pywal/pywal.svg".source = config.lib.file.mkOutOfStoreSymlink "/home/shiina/.cache/wal/pywal.svg";
+      home.file.".config/Kvantum/pywal/pywal.json".source = config.lib.file.mkOutOfStoreSymlink "/home/shiina/.cache/wal/pywal.json";
+      home.file.".config/Kvantum/kvantum.kvconfig".source = ../configs/Kvantum/kvantum.kvconfig;
     };
 }
