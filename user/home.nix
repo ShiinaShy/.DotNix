@@ -26,10 +26,6 @@
         "browser.compactmode.show" = true;
       };
     };
-    home.file.".librewolf/native-messaging-hosts" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/shiina/.mozilla/native-messaging-hosts";
-      recursive = true;
-    };
 
     # Set Config Files:
     home.file.".config/hypr/hyprpaper.conf".source = ../configs/hypr/hyprpaper.conf;
@@ -37,6 +33,10 @@
     home.file.".config/GIMP/3.0" = {
       # Hacky but works :3c
       source =  ../configs/GIMP;
+      recursive = true;
+    };
+    home.file.".config/waybar" = {
+      source =  ../configs/waybar;
       recursive = true;
     };
 
