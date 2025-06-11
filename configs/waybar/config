@@ -16,7 +16,7 @@
 
     "layer": "top",
     "margin-left": 0,
-    "margin-right": 0,    
+    "margin-right": 0,
     "spacing": 0,
 
 // ╔══════════════════════════════════╗
@@ -32,7 +32,6 @@
     "modules-left": [
         "custom/appmenu",
         "wlr/taskbar",
-        "group/pinned",
         "hyprland/window"
     ],
 
@@ -47,25 +46,23 @@
 // ╚══════════════════════════════════╝
 
     "modules-right": [
-        //"custom/updates",
-        "pulseaudio",
-        // START BT TOOGLE
-        //"bluetooth",
-        // END BT TOOGLE
+        // Audio
+        "group/audio",
+
+        // Battery
         //"battery",
-        // START NETWORK TOOGLE
+
+        // Network
         //"network",
-        // END NETWORK TOOGLE
-        "group/hardware",
-        //"custom/cliphist",
-        // START IDLE TOOGLE
-        //"idle_inhibitor",
-        // END IDLE TOOGLE
-        // START TRAY TOOGLE
+
+        // Hardware thingy?
+        //"group/hardware",
+
+        // System Tray
         "tray",
-        // END TRAY TOOGLE
-        "custom/exit",
-        //"custom/ml4w-welcome",
-        "clock"
+
+        // Clock
+
+        "group/status"
     ]
 }
