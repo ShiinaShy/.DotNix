@@ -39,6 +39,7 @@
       source =  ../configs/waybar;
       recursive = true;
     };
+    home.file.".config/rofi/config.rasi".source = ../configs/rofi/config.rasi;
 
     home.file.".icons/McMojave" = {
       # copy of McMojave stored in .DotNix | could've used flake but didn't like it due to unnececary complexity

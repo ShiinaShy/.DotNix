@@ -13,7 +13,7 @@
 @define-color card_bg_color {color14};
 @define-color card_fg_color {color0};
 @define-color card_shade_color {color11};
-@define-color popover_bg_color {color3};
+@define-color popover_bg_color alpha({color3}, 0.2);
 @define-color popover_fg_color {color14};
 @define-color dialog_bg_color {color3};
 @define-color dialog_fg_color {foreground};
