@@ -12,6 +12,9 @@
     alacritty
     gimp3
     keepassxc
+    nheko
+    kdePackages.qt6ct #needed for nheko themeing
     (pkgs.discord.override { withOpenASAR = true;})
   ];
+  nixpkgs.config.permittedInsecurePackages = [ "olm-3.2.16" ];
 }
