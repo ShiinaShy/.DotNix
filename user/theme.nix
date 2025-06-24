@@ -22,10 +22,15 @@
       };
       qt = {
         enable = true;
-        platformTheme.name = "gtct";
+        platformTheme.name = "qt5ct";
         style.name = "kvantum";
-        # style.package = pkgs.adwaita-qt;
       };
+      # makes qt6 ColorSchemes work
+      home.file.".config/kdeglobals".text =
+      ''
+        [UiSettings]
+        ColorScheme=*
+      '';
 
       home.file.".config/wal/templates" = {
         source =  ../configs/wal/templates;
