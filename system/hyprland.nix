@@ -20,16 +20,14 @@
 
   environment.systemPackages = with pkgs; [
     glib #maybe some day i find out why past me added it here :3c
-    waybar
-    eww
-    jq #for eww scripts
-    socat #for eww scripts
-    pywal16
+    waybar # not edible qwq
+    pywal16 # colors from wallpaper
     imagemagick #for pywal16
-    hyprpaper
-    rofi-wayland
-    xdg-desktop-portal-gtk
-    xviewer
-    nemo
+    hyprpaper # wallpaper
+    rofi-wayland # programm launcher
+    xdg-desktop-portal-gtk # i dunno o.o
+    xviewer # image viewver
+    nemo # file browser
+    mako # notifiation
   ];
 }
