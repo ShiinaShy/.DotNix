@@ -98,7 +98,13 @@
   // System Group?
   "group/status": {
     "orientation": "inherit",
-    "modules": ["battery", "network", "clock", "custom/power"]
+    "modules": [
+      "power-profiles-daemon",
+      "battery",
+      "network",
+      "clock",
+      "custom/power"
+    ]
   },
 
   // Clock
@@ -107,17 +113,30 @@
     "format-alt": "{:%Y-%m-%d}"
   },
 
-  // test
+  // Powermenu
   "custom/power": {
     "format": "󰤆",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "~/.config/waybar/power_menu.xml",
     "menu-actions": {
-      "shutdown": "shutdown",
+      "poweroff": "poweroff",
       "reboot": "reboot",
       "suspend": "systemctl suspend",
       "hibernate": "systemctl hibernate"
+    }
+  },
+
+  // Power profile
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "{profile}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
     }
   },
 
