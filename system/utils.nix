@@ -10,6 +10,7 @@
     git
     rsclock
     fastfetch
+    hyfetch
     lm_sensors
     btop
     killall
