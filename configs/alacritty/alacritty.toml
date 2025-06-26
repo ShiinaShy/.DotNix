@@ -1,6 +1,12 @@
-[general]
-# Import the pywal config
-general.import = ["~/.cache/wal/colors-alacritty.toml"]
-
 [window]
 padding = { x = 10, y = 5 }
+
+[general]
+# Import the pywal config
+import = ["~/.cache/wal/alacritty.toml"]
+
+[terminal]
+shell.program = "zsh" #i think u're supposed to use /bin/zsh but nix wont let me o.o
+
+[font.normal]
+family = "Profont IIx Nerd Font Mono"
