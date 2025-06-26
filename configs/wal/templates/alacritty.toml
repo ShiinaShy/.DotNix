@@ -1,0 +1,26 @@
+[window]
+opacity = 0.6
+
+[colors]
+[colors.primary]
+	foreground = "{foreground}"
+	background = "#000000"
+	#cursor = {{ text = "CellBackground", cursor = "CellForeground" }} I dunno??
+[colors.bright]
+	black = "{color0}"
+	red = "{color9}"
+	green = "{color10}"
+	yellow =  "{color11}"
+	blue = "{color12}"
+	magenta = "{color13}"
+	cyan = "{color14}"
+	white = "{color15}"
+[colors.normal]
+	black = "{color8}"
+	red = "{color9}"
+	green = "{color10}"
+	yellow = "{color11}"
+	blue = "{color12}"
+	magenta = "{color13}"
+	cyan = "{color14}"
+	white = "{color15}"
