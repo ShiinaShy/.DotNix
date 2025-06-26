@@ -67,6 +67,7 @@
     extraGroups = [ "networkmanager" "wheel" "audio" ];
     packages = with pkgs; [];
   };
+  programs.zsh.enable = true; # wiki told me to o.o
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

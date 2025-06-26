@@ -10,20 +10,31 @@
     home.packages = [];
     programs = {
       bash.enable = true;
+      zsh = {
+        enable = true;
+        enableCompletion = true;
+        autosuggestion.enable = true;
+        autosuggestion.highlight = "fg=red,italic,underline";
+        syntaxHighlighting = {
+          enable = true;
+          styles = {
+            "alias" = "fg=magenta,bold";
+            "command" = "fg=cyan";
+          };
+        };
+      };
       git = {
         enable = true;
         userName = "Shiina";
         userEmail = "shiina.shy04@gmail.com";
       };
-    };
-
-    # Librewolf
-    programs.librewolf = {
-      enable = true;
-      settings = {
-        "general.autoScroll" = true;
-        "browser.toolbars.bookmarks.visibility" = "newtab";
-        "browser.compactmode.show" = true;
+      librewolf = {
+        enable = true;
+        settings = {
+          "general.autoScroll" = true;
+          "browser.toolbars.bookmarks.visibility" = "newtab";
+          "browser.compactmode.show" = true;
+        };
       };
     };
 
