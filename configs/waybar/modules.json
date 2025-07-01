@@ -122,8 +122,9 @@
     "menu-actions": {
       "poweroff": "poweroff",
       "reboot": "reboot",
-      "suspend": "systemctl suspend",
-      "hibernate": "systemctl hibernate"
+      "suspend": "hyprlock & disown && systemctl suspend",
+      "hibernate": "hyprlock & disown && systemctl hibernate",
+      "lock": "hyprlock"
     }
   },
 

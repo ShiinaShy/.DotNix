@@ -11,7 +11,7 @@
       enable = true;
       xwayland.enable = true;
     };
-    #hyprlock.enable = true; for future laptop use
+    hyprlock.enable = true;
   };
   # Electron use Wayland
   environment.sessionVariables = {

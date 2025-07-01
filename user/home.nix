@@ -48,6 +48,7 @@
     # Set Config Files:
     home.file.".config/hypr/hyprpaper.conf".source = ../configs/hypr/hyprpaper.conf;
     home.file.".config/hypr/hyprland.conf".source = ../configs/hypr/hyprland.conf;
+    home.file.".config/hypr/hyprlock.conf".source = ../configs/hypr/hyprlock.conf;
     home.file.".config/alacritty/alacritty.toml".source = ../configs/alacritty/alacritty.toml;
     home.file.".config/GIMP/3.0" = {
       # Hacky but works :3c
