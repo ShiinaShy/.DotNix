@@ -21,6 +21,13 @@
   # Enable NTFS Support
   boot.supportedFilesystems = ["ntfs"];
 
+  # Powermanagement
+  # set amd_pstate=passive and uncomment cpuFreqGovenor for maxium batterylife
+  boot.kernelParams = [ "amd_pstate=active" ];
+  powerManagement.enable = true;
+  # powerManagement.cpuFreqGovernor = "powersave";
+  services.power-profiles-daemon.enable=true; # used by waybar to set powerprofile | breaks with cpuFreqGovenor
+
   networking.hostName = "nixos"; # Hostname
   # networking.wireless.enable = true;  # Wireless support via wpa_supplicant
 
