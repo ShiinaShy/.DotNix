@@ -13,7 +13,6 @@
     hyfetch
     lm_sensors
     btop
-    killall
   ];
   services.power-profiles-daemon.enable=true;
 }
