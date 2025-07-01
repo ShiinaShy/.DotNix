@@ -14,5 +14,4 @@
     lm_sensors
     btop
   ];
-  services.power-profiles-daemon.enable=true;
 }
