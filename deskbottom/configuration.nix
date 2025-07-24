@@ -11,7 +11,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./load.nix
+      ../load.nix
     ];
 
   # Bootloader.
@@ -28,7 +28,7 @@
   # powerManagement.cpuFreqGovernor = "powersave";
   services.power-profiles-daemon.enable=true; # used by waybar to set powerprofile | breaks with cpuFreqGovenor
 
-  networking.hostName = "nixos"; # Hostname
+  networking.hostName = "deskbottom"; # Hostname
   # networking.wireless.enable = true;  # Wireless support via wpa_supplicant
 
   # Enable networking
