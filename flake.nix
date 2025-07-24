@@ -10,15 +10,26 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs;};
-      modules = [
-        ./configuration.nix
-        ./user/home.nix
-        inputs.home-manager.nixosModules.default
-      ];
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+    let
+      varsConfig = import ./vars.nix;
+    in {
+      nixosConfigurations = {
+        deskbottom = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = {
+            inherit inputs;
+            vars = varsConfig.deskbottom;
+          };
+          modules = [
+            ./deskbottom/configuration.nix
+            ./user/home.nix
+            inputs.home-manager.nixosModules.default
+          ];
+        };
+      lapbottom = nixpkgs.lib.nixosSystem {
+        # future framework config
+      };
     };
   };
 }
