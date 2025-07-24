@@ -3,8 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     lsof
-    grim
-    slurp
+    grimblast
     vulkan-tools
     wget
     git
