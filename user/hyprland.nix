@@ -50,14 +50,17 @@ in {
       bind = ${mainMod}, P, pseudo, # dwindle
       bind = ${mainMod}, J, togglesplit, # dwindle
 
+      # Lid Switch
+      bindl =, switch:on:Lid Switch, exec, hyprlock
+
       # Volume Keys
       binde =, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
       binde =, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
       binde =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
       # Brightness Keys
-      bind =, XF86MonBrightnessUp, exec, brightnessctl set +15%
-      bind =, XF86MonBrightnessDown, exec, brightnessctl set 15%-
+      bind =, XF86MonBrightnessUp, exec, brightnessctl set +5%
+      bind =, XF86MonBrightnessDown, exec, brightnessctl set 5%-
 
       # Take Screenshot
       bind =, Print, exec, grimblast --freeze copy area
