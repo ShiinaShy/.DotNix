@@ -18,11 +18,11 @@
   services.fwupd.enable = true;
 
   # Powermanagement
-  # set amd_pstate=passive and uncomment cpuFreqGovenor for maxium batterylife
   boot.kernelParams = [ "amd_pstate=active" ];
   powerManagement.enable = true;
-  # powerManagement.cpuFreqGovernor = "powersave";
   services.power-profiles-daemon.enable=true; # used by waybar to set powerprofile | breaks with cpuFreqGovernor
+  # Set suspend-then-hibernate delay
+  systemd.sleep.extraConfig = "HibernateDelaySec=30s";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
