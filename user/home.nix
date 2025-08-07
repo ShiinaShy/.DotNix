@@ -60,12 +60,9 @@
     home.file.".config/rofi/config.rasi".source = ../configs/rofi/config.rasi;
     home.file.".config/mako/config".source = ../configs/mako/config;
 
-    # home.file.".icons/McMojave1" = {
-    #   # copy of McMojave stored in .DotNix | could've used flake but didn't like it due to unnececary complexity
-    #   # not happy either but maybe can find better solution in future :3
-    #   source = ../configs/hypr/McMojave;
-    #   recursive = true;
-    # };
+    home.file.".config/zed/keymap.json".source = ../configs/zed/keymap.json;
+    home.file.".config/zed/settings.json".source = ../configs/zed/settings.json;
+
     # The state version is required and should stay at the version you originally installed.
     home.stateVersion = "23.11";
   };
