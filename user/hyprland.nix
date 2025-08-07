@@ -1,6 +1,6 @@
 {config, pkgs, inputs, vars, ...}:
 let
-  mcMojave = import ../configs/hypr/mc-mojave-cursor.nix { inherit pkgs; };
+  mcMojave = import ./mc-mojave-cursor.nix { inherit pkgs; };
   monitor = vars.monitor;
   autoStart = vars.autoStart;
   workspaceRules = vars.workspaceRules;

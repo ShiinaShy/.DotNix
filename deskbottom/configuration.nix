@@ -11,7 +11,10 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../load.nix
+      ../system/hyprland.nix
+      ../system/utils.nix
+      ../system/programms.nix
+      ../system/environment.nix
     ];
 
   # Bootloader.
