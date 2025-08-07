@@ -159,12 +159,11 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}   {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "format-alt": "{icon}  {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "]
+    "format": "{icon}",
+    "format-charging": "",
+    "format-plugged": "",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "format-time": "{H}h{M}m",
+    "tooltip-format": "{capacity}% | {time}"
   }
 }
