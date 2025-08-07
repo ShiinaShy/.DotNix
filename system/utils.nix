@@ -12,5 +12,6 @@
     hyfetch
     lm_sensors
     btop
+    brightnessctl
   ];
 }

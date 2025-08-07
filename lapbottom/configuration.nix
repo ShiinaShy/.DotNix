@@ -14,6 +14,16 @@
       ../system/environment.nix
    ];
 
+  # Enable firmware updates
+  services.fwupd.enable = true;
+
+  # Powermanagement
+  # set amd_pstate=passive and uncomment cpuFreqGovenor for maxium batterylife
+  boot.kernelParams = [ "amd_pstate=active" ];
+  powerManagement.enable = true;
+  # powerManagement.cpuFreqGovernor = "powersave";
+  services.power-profiles-daemon.enable=true; # used by waybar to set powerprofile | breaks with cpuFreqGovernor
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -47,9 +57,9 @@
   };
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

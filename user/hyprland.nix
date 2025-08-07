@@ -55,6 +55,10 @@ in {
       binde =, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
       binde =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
+      # Brightness Keys
+      bind =, XF86MonBrightnessUp, exec, brightnessctl set +15%
+      bind =, XF86MonBrightnessDown, exec, brightnessctl set 15%-
+
       # Take Screenshot
       bind =, Print, exec, grimblast --freeze copy area
 
@@ -112,7 +116,7 @@ in {
           follow_mouse = 1
 
           touchpad {
-              natural_scroll = no
+              natural_scroll = yes
           }
 
           sensitivity = 0.5 # -1.0 - 1.0, 0 means no modification.
