@@ -4,6 +4,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -35,8 +36,9 @@
 	};
 	modules = [
 	  ./lapbottom/configuration.nix
+	  inputs.nixos-hardware.nixosModules.framework-13-7040-amd
 	  ./user/home.nix
-          inputs.home-manager.nixosModules.default
+      inputs.home-manager.nixosModules.default
 	];
       };
     };
