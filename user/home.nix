@@ -27,7 +27,7 @@
       git = {
         enable = true;
         userName = "Shiina";
-        userEmail = "shiina.shy04@gmail.com";
+        userEmail = "shiina.shy@gibhug.com";
       };
       librewolf = {
         enable = true;
