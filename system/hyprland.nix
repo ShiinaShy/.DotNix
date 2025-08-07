@@ -5,6 +5,15 @@
   #boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
   #boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
 
+  # Enable Audio
+  security.rtkit.enable = true;
+    services.pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+  };
+
   # Enable Hyprland
   programs = {
     hyprland = {
@@ -30,4 +39,11 @@
     nemo # file browser
     mako # notifiation
   ];
+
+  fonts.packages = with pkgs; [
+    font-awesome
+    nerd-fonts.fira-code
+    nerd-fonts.profont
+  ];
+
 }

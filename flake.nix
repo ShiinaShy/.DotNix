@@ -28,7 +28,16 @@
           ];
         };
       lapbottom = nixpkgs.lib.nixosSystem {
-        # future framework config
+	system= "x86_64-linux";
+	specialArgs = {
+	  inherit inputs;
+	  vars = varsConfig.lapbottom;
+	};
+	modules = [
+	  ./lapbottom/configuration.nix
+	  ./user/home.nix
+          inputs.home-manager.nixosModules.default
+	];
       };
     };
   };

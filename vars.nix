@@ -7,4 +7,11 @@
     autoStart = "waybar & hyprpaper & discord & keepassxc & kdeconnect-indicator";
     workspaceRules = "workspace = 5, monitor:DP-3, default:true";
   };
+  lapbottom = {
+    monitor = ''
+      monitor=eDP-1,2256x1504@60,auto,1
+    '';
+    autoStart = "waybar & hyprpaper & discord & keepassxc & kdeconnect-indicator";
+    workspaceRules = "";
+  };
 }
