@@ -9,7 +9,7 @@
   };
   lapbottom = {
     monitor = ''
-      monitor=eDP-1,2256x1504@60,auto,1.2
+      monitor=eDP-1,2256x1504@60,auto,1.333333
     '';
     autoStart = "waybar & hyprpaper & keepassxc & kdeconnect-indicator";
     workspaceRules = "";
