@@ -51,7 +51,8 @@ in {
       bind = ${mainMod}, J, togglesplit, # dwindle
 
       # Lid Switch
-      bindl =, switch:on:Lid Switch, exec, hyprlock & disown && systemctl suspend
+      bindl =, switch:on:Lid Switch, exec, hyprlock
+
       # Volume Keys
       binde =, XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
       binde =, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
