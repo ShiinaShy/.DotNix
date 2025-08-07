@@ -21,8 +21,13 @@
   boot.kernelParams = [ "amd_pstate=active" ];
   powerManagement.enable = true;
   services.power-profiles-daemon.enable=true; # used by waybar to set powerprofile | breaks with cpuFreqGovernor
-  # Set suspend-then-hibernate delay
-  systemd.sleep.extraConfig = "HibernateDelaySec=30s";
+  systemd.sleep.extraConfig = "HibernateDelaySec=120m"; # Set suspend-then-hibernate delay
+  # Disable instant system kill when pressing power button o.o
+  services.logind = {
+    powerKey = "ignore";
+    powerKeyLongPress = "reboot";
+    lidSwitch = "suspend-then-hibernate";
+  };
 
   # Fingerprint
   services.fprintd.enable = true;
