@@ -24,6 +24,8 @@
   # Set suspend-then-hibernate delay
   systemd.sleep.extraConfig = "HibernateDelaySec=30s";
 
+  # Fingerprint
+  services.fprintd.enable = true;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -69,6 +71,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
+  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
