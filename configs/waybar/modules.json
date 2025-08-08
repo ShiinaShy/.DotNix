@@ -148,7 +148,7 @@
     "format-disconnected": "󰌙",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip-format-ethernet": "󰜷 {bandwidthUpBits} 󰜮 {bandwidthDownBits}",
-    "tooltip-format-wifi": "󰜷 {bandwidthUpBits} 󰜮 {bandwidthDownBits} | Strength: {signalStrength}",
+    "tooltip-format-wifi": "󰜷 {bandwidthUpBits} 󰜮 {bandwidthDownBits} | {essid} | Strength: {signalStrength}",
     "tooltip-disconnected": "No internet qwq"
   },
 
