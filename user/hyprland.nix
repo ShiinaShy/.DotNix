@@ -59,8 +59,8 @@ in {
       binde =, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
       # Brightness Keys
-      bind =, XF86MonBrightnessUp, exec, brightnessctl set +5%
-      bind =, XF86MonBrightnessDown, exec, brightnessctl set 5%-
+      bind =, XF86MonBrightnessUp, exec, brightnessctl set +10%
+      bind =, XF86MonBrightnessDown, exec, brightnessctl set 10%-
 
       # Take Screenshot
       bind =, Print, exec, grimblast --freeze copy area
