@@ -11,7 +11,8 @@
     fastfetch
     hyfetch
     lm_sensors
-    btop
+    btop-rocm
     brightnessctl
+    rocmPackages.rocm-smi
   ];
 }
