@@ -19,7 +19,7 @@
   // "disable_ai": true,
   "relative_line_numbers": true,
   "experimental.theme_overrides": {
-    "background.appearance": "blurred",
+    "background.appearance": "opaque",
     "background": "#050010c0",
     "title_bar.background": "#0c0c17c9",
     "status_bar.background": "#0c0c17c9",
