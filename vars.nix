@@ -6,6 +6,9 @@
     '';
     autoStart = "waybar & hyprpaper & discord & keepassxc & kdeconnect-indicator";
     workspaceRules = "workspace = 5, monitor:DP-3, default:true";
+    blur = "true";
+    shadow = "true";
+    vfr = "false";
   };
   lapbottom = {
     monitor = ''
@@ -13,5 +16,8 @@
     '';
     autoStart = "waybar & hyprpaper & keepassxc & kdeconnect-indicator";
     workspaceRules = "";
+    blur = "true";
+    shadow = "false";
+    vfr = "true";
   };
 }

@@ -4,6 +4,9 @@ let
   monitor = vars.monitor;
   autoStart = vars.autoStart;
   workspaceRules = vars.workspaceRules;
+  blur = vars.blur;
+  shadow = vars.shadow;
+  vfr = vars.vfr;
 
   cursorTheme = "McMojave";
 
@@ -148,12 +151,12 @@ in {
           rounding = 10
 
           blur {
-              enabled = true
+              enabled = ${blur}
               size = 3
               passes = 1
           }
           shadow {
-              enabled = yes
+              enabled = ${shadow}
               range = 4
               render_power = 3
               color = rgba(1a1a1aee)
@@ -194,6 +197,7 @@ in {
       misc {
           # See https://wiki.hyprland.org/Configuring/Variables/ for more
           force_default_wallpaper = -1 # Set to 0 or 1 to disable the anime mascot wallpapers
+          vfr = ${vfr}
       }
     '';
     home.file.".config/hypr/hyprlock.conf".text = ''
