@@ -12,6 +12,7 @@
       ../system/utils.nix
       ../system/programms.nix
       ../system/environment.nix
+      ../system/steam.nix
    ];
 
   # Enable firmware updates
