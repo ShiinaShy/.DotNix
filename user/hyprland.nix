@@ -199,6 +199,9 @@ in {
           force_default_wallpaper = -1 # Set to 0 or 1 to disable the anime mascot wallpapers
           vfr = ${vfr}
       }
+      debug {
+      full_cm_proto = true
+      }
     '';
     home.file.".config/hypr/hyprlock.conf".text = ''
       # Include Pywal colors

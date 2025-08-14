@@ -4,6 +4,7 @@
     inputs.home-manager.nixosModules.default
     ./theme.nix
     ./hyprland.nix
+    ./nvim/nvim.nix
   ];
 
 
