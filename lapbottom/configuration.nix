@@ -21,8 +21,10 @@
   # Powermanagement
   boot.kernelParams = [ "amd_pstate=active" ];
   powerManagement.enable = true;
+  powerManagement.powertop.enable = true;
   services.power-profiles-daemon.enable=true; # used by waybar to set powerprofile | breaks with cpuFreqGovernor
   systemd.sleep.extraConfig = "HibernateDelaySec=120m"; # Set suspend-then-hibernate delay
+
   # Disable instant system kill when pressing power button o.o
   services.logind = {
     powerKey = "ignore";
@@ -117,5 +119,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }
