@@ -29,17 +29,17 @@
           ];
         };
       lapbottom = nixpkgs.lib.nixosSystem {
-	system= "x86_64-linux";
-	specialArgs = {
-	  inherit inputs;
-	  vars = varsConfig.lapbottom;
-	};
-	modules = [
-	  ./lapbottom/configuration.nix
-	  inputs.nixos-hardware.nixosModules.framework-13-7040-amd
-	  ./user/home.nix
-      inputs.home-manager.nixosModules.default
-	];
+       	system= "x86_64-linux";
+       	specialArgs = {
+       	  inherit inputs;
+       	  vars = varsConfig.lapbottom;
+       	};
+       	modules = [
+       	  ./lapbottom/configuration.nix
+       	  inputs.nixos-hardware.nixosModules.framework-13-7040-amd
+       	  ./user/home.nix
+          inputs.home-manager.nixosModules.default
+       	];
       };
     };
   };
