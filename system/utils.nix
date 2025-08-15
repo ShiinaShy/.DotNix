@@ -14,5 +14,6 @@
     btop-rocm
     brightnessctl
     rocmPackages.rocm-smi
+    wl-clipboard # for neovim
   ];
 }
