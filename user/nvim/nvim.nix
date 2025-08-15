@@ -1,5 +1,5 @@
 # Neovim config
-{ config, lib, pkgs, ...}:
+{ config, lib, pkgs, inputs, ...}:
 {
   home-manager.users.shiina = {config, ...}:
   let
@@ -9,13 +9,23 @@
   {
     programs.neovim = {
       enable = true;
-      # extraConfig = ''
-      #   set number relativenumber
-      #   highlight Normal guibg=none
-      #   highlight NonText guibg=none
-      #   highlight Normal ctermbg=none
-      #   highlight NonText ctermbg=none
-      # '';
+      extraConfig = ''
+        set number relativenumber
+        filetype plugin on
+
+        highlight Normal guibg=none
+        highlight NonText guibg=none
+        highlight Normal ctermbg=none
+        highlight NonText ctermbg=none
+
+        NvimTreeOpen
+
+        setlocal expandtab
+        setlocal tabstop=4
+        setlocal shiftwidth=4
+
+        set clipboard+=unnamedplus
+      '';
 
       plugins = with pkgs.vimPlugins; [
         {
@@ -28,27 +38,43 @@
         }
         {
           plugin = nvim-tree-lua;
-          config = toLua "require(\'nvim-tree\').setup()";
+          config = fileToLua ./tree.lua;
         }
-        barbar-nvim
+        {
+          plugin = barbar-nvim;
+          config = fileToLua ./barbar.lua;
+        }
 
         (nvim-treesitter.withPlugins (p: [
           p.tree-sitter-nix
           p.tree-sitter-zig
         ]))
-
+        {
+          plugin = catppuccin-nvim;
+          config = fileToLua ./colorscheme.lua;
+        }
         {
           plugin = nvim-lspconfig;
-          config = toLua ''
-            vim.lsp.enable('nixd');
-          '';
+          config = fileToLua ./lsp.lua;
         }
 
-        # (nvim-treesitter.withPlugins (p: [
-        #   p.tree-sitter-nix
-        #   p.tree-sitter-zig
-        # ]))
+        cmp-nvim-lsp
+        luasnip
+        friendly-snippets
+        {
+          plugin = nvim-cmp;
+          config = fileToLua ./cmp.lua;
+        }
+        {
+          plugin = gitsigns-nvim;
+          config = toLua "require(\'gitsigns\').setup()";
+        }
       ];
     };
+    home.file.".config/nvim/ftplugin/nix.vim".text = ''
+      setlocal expandtab
+      setlocal tabstop=2
+      setlocal shiftwidth=2
+    '';
   };
 }

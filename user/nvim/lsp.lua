@@ -19,4 +19,20 @@ local on_attach = function(_, bufnr)
     end, {})
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+vim.diagnostic.config({
+    virtual_text = false,
+    signs = false,
+    underline = true,
+    update_in_insert = false,
+    float = {
+        border = "rounded",
+        source = true,
+    },
+    severity_sort = true,
+})
+
 vim.lsp.enable('nixd');
+vim.lsp.enable('zls');
