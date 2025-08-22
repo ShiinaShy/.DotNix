@@ -29,6 +29,12 @@ require("nvim-tree").setup({
         open_file = {
             quit_on_open = false,
         }
+    },
+    renderer = {
+	highlight_git = "name", 
+	icons = { 
+		git_placement = "signcolumn",
+	},
     }
 })
 
