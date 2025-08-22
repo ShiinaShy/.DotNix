@@ -11,6 +11,7 @@
       enable = true;
       extraConfig = ''
         set number relativenumber
+        set signcolumn=yes
         filetype plugin on
 
         highlight Normal guibg=none
