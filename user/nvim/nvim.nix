@@ -23,51 +23,73 @@
         highlight Normal ctermbg=none
         highlight NonText ctermbg=none
 
-        NvimTreeOpen
+
+        nnoremap <SPACE> <Nop>
+        let mapleader=" "
 
         set clipboard+=unnamedplus
+
+        
+        " Paste without copy
+        xnoremap <leader>p "\"_dP
+
+        " Open Telescope
+        nnoremap <leader>g <cmd>Telescope find_files<cr>
+
+        " NvimTreeOpen
+        nnoremap <leader>- <cmd>NvimTreeToggle<cr>
 
         " Auto Brackets
         inoremap ( ()<Left>
         inoremap [ []<Left>
         inoremap { {}<Left>
         inoremap <expr> <CR> search('{\%#}', 'n') ? "\<CR>\<CR>\<Up>\<C-f>" : "\<CR>"
+
+        " Evil save
+        nnoremap <C-s> <cmd>w<cr>
       '';
 
       plugins = with pkgs.vimPlugins; [
+        # UI
         {
-          plugin = lualine-nvim;
-          config = toLua "require(\'lualine\').setup()";
+          plugin = catppuccin-nvim;
+          config = fileToLua ./colorscheme.lua;
         }
         {
           plugin = nvim-web-devicons;
           config = toLua "require(\'nvim-web-devicons\').setup()";
         }
         {
-          plugin = nvim-tree-lua;
-          config = fileToLua ./tree.lua;
+          plugin = indent-blankline-nvim;
+          config = toLua "require(\'ibl\').setup()";
+        }
+        {
+          plugin = lualine-nvim;
+          config = toLua "require(\'lualine\').setup()";
         }
         {
           plugin = barbar-nvim;
           config = fileToLua ./barbar.lua;
         }
 
-        (nvim-treesitter.withPlugins (p: [
-          p.tree-sitter-nix
-          p.tree-sitter-zig
-        ]))
+        # Tools
         {
-          plugin = catppuccin-nvim;
-          config = fileToLua ./colorscheme.lua;
+          plugin = nvim-tree-lua;
+          config = fileToLua ./tree.lua;
         }
+        {
+          plugin = telescope-fzf-native-nvim;
+          config = fileToLua ./telescope.lua;
+        }
+
+        # LSP 
+        cmp-nvim-lsp
+        luasnip
+        friendly-snippets
         {
           plugin = nvim-lspconfig;
           config = fileToLua ./lsp.lua;
         }
-
-        cmp-nvim-lsp
-        luasnip
-        friendly-snippets
         {
           plugin = nvim-cmp;
           config = fileToLua ./cmp.lua;
@@ -76,8 +98,16 @@
           plugin = gitsigns-nvim;
           config = toLua "require(\'gitsigns\').setup()";
         }
+
+        # Treesitter
+        (nvim-treesitter.withPlugins (p: [
+          p.tree-sitter-nix
+          p.tree-sitter-zig
+        ]))
       ];
     };
+
+    # Filetype Plugin Config
     home.file.".config/nvim/ftplugin/nix.vim".text = ''
       setlocal expandtab
       setlocal tabstop=2
