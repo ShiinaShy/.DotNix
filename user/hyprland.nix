@@ -81,10 +81,10 @@ in {
       bind = ${mainMod} SHIFT, down, swapwindow, d
 
       # Resize windows with maindMOd + ctrl + arrow keys
-        bind = ${mainMod} CTRL, right, resizeactive, 10 0
-        bind = ${mainMod} CTRL, left, resizeactive, -10 0
-        bind = ${mainMod} CTRL, up, resizeactive, 0 -10
-        bind = ${mainMod} CTRL, down, resizeactive, 0 10
+      bind = ${mainMod} CTRL, right, resizeactive, 25 0
+      bind = ${mainMod} CTRL, left, resizeactive, -25 0
+      bind = ${mainMod} CTRL, up, resizeactive, 0 -25
+      bind = ${mainMod} CTRL, down, resizeactive, 0 25
 
       # Switch workspaces with mainMod + [0-9]
       bind = ${mainMod}, 1, workspace, 1
