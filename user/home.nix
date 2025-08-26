@@ -24,6 +24,10 @@
             "command" = "fg=cyan";
           };
         };
+        shellAliases = {
+          dotnix = "cd ~/.DotNix";
+          flakebuild = "sudo nixos-rebuild switch --flake .";
+        };
       };
       git = {
         enable = true;
