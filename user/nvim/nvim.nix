@@ -26,6 +26,12 @@
         NvimTreeOpen
 
         set clipboard+=unnamedplus
+
+        " Auto Brackets
+        inoremap ( ()<Left>
+        inoremap [ []<Left>
+        inoremap { {}<Left>
+        inoremap <expr> <CR> search('{\%#}', 'n') ? "\<CR>\<CR>\<Up>\<C-f>" : "\<CR>"
       '';
 
       plugins = with pkgs.vimPlugins; [
