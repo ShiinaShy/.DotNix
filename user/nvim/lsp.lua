@@ -1,5 +1,5 @@
 local on_attach = function(_, bufnr)
-
+    print("LSP attached to buffer: " .. bufnr)
     local bufmap = function(keys, func)
         vim.keymap.set('n', keys, func, {buffer = bufnr})
     end
@@ -11,6 +11,10 @@ local on_attach = function(_, bufnr)
     bufmap('dD', vim.lsp.buf.declaration)
     bufmap('gI', vim.lsp.buf.implementation)
     bufmap('<leader>D', vim.lsp.buf.type_definition)
+    bufmap('<leader>f', function() 
+        vim.lsp.buf.format()
+        print("Formatting...")
+    end)
 
     bufmap('K', vim.lsp.buf.hover)
 
@@ -41,4 +45,12 @@ vim.diagnostic.config({
 })
 
 vim.lsp.enable('nixd');
+vim.lsp.config('nixd', {
+    on_attach = on_attach,
+    capabilities = capabilities,
+});
 vim.lsp.enable('zls');
+vim.lsp.config('zls', {
+    on_attach = on_attach,
+    capabilities = capabilities,
+});
