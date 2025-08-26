@@ -10,6 +10,10 @@
     programs.neovim = {
       enable = true;
       extraConfig = ''
+        set expandtab
+        set tabstop=4
+        set shiftwidth=4
+
         set number relativenumber
         set signcolumn=yes
         filetype plugin on
@@ -20,10 +24,6 @@
         highlight NonText ctermbg=none
 
         NvimTreeOpen
-
-        setlocal expandtab
-        setlocal tabstop=4
-        setlocal shiftwidth=4
 
         set clipboard+=unnamedplus
       '';
