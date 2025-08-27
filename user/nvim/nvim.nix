@@ -61,7 +61,7 @@
         }
         {
           plugin = indent-blankline-nvim;
-          config = toLua "require(\'ibl\').setup()";
+          config = toLua "require(\'ibl\').setup({indent = {char = \'▏\'}})";
         }
         {
           plugin = lualine-nvim;
