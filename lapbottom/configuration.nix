@@ -26,10 +26,10 @@
   systemd.sleep.extraConfig = "HibernateDelaySec=120m"; # Set suspend-then-hibernate delay
 
   # Disable instant system kill when pressing power button o.o
-  services.logind = {
-    powerKey = "ignore";
-    powerKeyLongPress = "reboot";
-    lidSwitch = "suspend-then-hibernate";
+  services.logind.settings.Login = {
+    HandlePowerKey = "ignore";
+    HandlePowerKeyLongPress = "reboot";
+    HandleLidSwitch = "suspend-then-hibernate";
   };
 
   # Fingerprint
