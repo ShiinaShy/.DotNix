@@ -1,8 +1,6 @@
 # Main Programms used :3
 { pkgs, ...}:
 {
-  # Fix Nautilus Stuff
-  services.gvfs.enable = true;
   # Enable KDEConnect
   programs.kdeconnect.enable = true;
   # Enable gnome-keyring

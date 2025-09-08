@@ -5,6 +5,9 @@
   #boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
   #boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
 
+  # Fix Filemanager Stuff
+  services.gvfs.enable = true;
+
   # Enable Audio
   security.rtkit.enable = true;
     services.pipewire = {
@@ -36,7 +39,7 @@
     rofi-wayland # programm launcher
     xdg-desktop-portal-gtk # i dunno o.o
     xviewer # image viewver
-    nemo # file browser
+    pcmanfm # file browser
     mako # notifiation
   ];
 
