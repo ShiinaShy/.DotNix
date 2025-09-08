@@ -27,6 +27,7 @@
         shellAliases = {
           dotnix = "cd ~/.DotNix";
           flakebuild = "sudo nixos-rebuild switch --flake .";
+          nnvim = "alacritty -e nvim & disown";
         };
       };
       git = {
