@@ -42,6 +42,19 @@
           "browser.compactmode.show" = true;
         };
       };
+      thunderbird = {
+        enable = true;
+        profiles.default = {
+          isDefault = true;
+          settings = {
+            "mail.ui.display.dateformat.today" = 2;
+            "mailnews.wraplength" = 0;
+            "intl.regional_prefs.use_os_locales" = true;
+            "general.autoScroll" = true;
+            "mail.accounthub.enabled" = false;
+          };
+        };
+      };
       btop = {
         enable = true;
         settings = {
