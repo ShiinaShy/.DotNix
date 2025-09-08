@@ -12,7 +12,7 @@ let
 
   mainMod = "SUPER";
   terminal = "alacritty";
-  fileManager = "nemo";
+  fileManager = "pcmanfm";
   browser = "librewolf";
   menu = "rofi -show drun";
 in {
