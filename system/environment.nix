@@ -6,6 +6,6 @@
     zls
     nixd
     #zed-editor
-    (zed-editor.fhsWithPackages (pkgs: [ pkgs.zlib ]))
+    # (zed-editor.fhsWithPackages (pkgs: [ pkgs.zlib ]))
   ];
 }
