@@ -68,6 +68,11 @@ in {
       # Take Screenshot
       bind =, Print, exec, grimblast --freeze copy area
 
+      # Suspend System
+      bind = ${mainMod}, O, exec,  hyprlock & disown && systemctl suspend
+      # Lock System
+      bind = ${mainMod}, L, exec, hyprlock & disown
+
       # Move focus with mainMod + arrow keys
       bind = ${mainMod}, left, movefocus, l
       bind = ${mainMod}, right, movefocus, r
