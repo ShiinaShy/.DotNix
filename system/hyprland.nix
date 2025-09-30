@@ -36,7 +36,7 @@
     pywal16 # colors from wallpaper
     imagemagick #for pywal16
     hyprpaper # wallpaper
-    rofi-wayland # programm launcher
+    rofi # programm launcher
     xdg-desktop-portal-gtk # i dunno o.o
     xviewer # image viewver
     pcmanfm # file browser
