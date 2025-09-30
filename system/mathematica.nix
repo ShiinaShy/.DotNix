@@ -1,0 +1,21 @@
+# This is a module to import if I wanna install Mathematica
+# It is required to download the Mathematica install script from the website (rename file from uni to fit description silly) and add it to the nix-store manually using:
+# nix-store --query --hash \ $(nix store add-path Mathematica_XX.X.X_BNDL_LINUX.sh --name 'Mathematica_XX.X.X_BNDL_LINUX.sh')
+# Then replace the resulting hash
+
+{pkgs, ...}:
+{
+  environment.systemPackages = with pkgs; [
+    (mathematica.override {
+      source = requireFile {
+        name = "Mathematica_14.1.0_BNDL_LINUX.sh";
+        sha256 = "17z5aq7qaind1zkyandf1aq76iy0a0yqmj8qmc0wrc15s5k1lg1q";
+        message = ''
+          Your override for Mathematica includes a different src for the installer,
+          and it is missing.
+        '';
+        hashMode = "recursive";
+      };
+    })
+  ];
+}
