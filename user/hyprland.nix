@@ -7,6 +7,7 @@ let
   blur = vars.blur;
   shadow = vars.shadow;
   vfr = vars.vfr;
+  suspendType = vars.suspendType;
 
   cursorTheme = "McMojave";
 
@@ -69,7 +70,7 @@ in {
       bind =, Print, exec, grimblast --freeze copy area
 
       # Suspend System
-      bind = ${mainMod}, O, exec,  hyprlock & disown && systemctl suspend
+      bind = ${mainMod}, O, exec,  hyprlock & disown && systemctl ${suspendType} 
       # Lock System
       bind = ${mainMod}, L, exec, hyprlock & disown
 
