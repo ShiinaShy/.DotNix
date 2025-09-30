@@ -9,6 +9,7 @@
     blur = "true";
     shadow = "true";
     vfr = "false";
+    suspendType = "suspend";
   };
   lapbottom = {
     monitor = ''
@@ -19,5 +20,6 @@
     blur = "true";
     shadow = "false";
     vfr = "true";
+    suspendType = "suspend-then-hibernate";
   };
 }
