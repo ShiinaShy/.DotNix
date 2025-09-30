@@ -16,7 +16,7 @@
    ];
 
   # Enable firmware updates
-  services.fwupd.enable = true;
+  # services.fwupd.enable = true;
 
   # Powermanagement
   boot.kernelParams = [ "amd_pstate=active" ];
