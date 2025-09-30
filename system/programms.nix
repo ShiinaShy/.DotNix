@@ -5,6 +5,11 @@
   programs.kdeconnect.enable = true;
   # Enable gnome-keyring
   services.gnome.gnome-keyring.enable = true;
+  security.pam.sshAgentAuth.enable = true;
+  programs.ssh.extraConfig = ''
+    Host github.com
+    IdentityFile ~/.ssh/github
+  '';
 
   environment.systemPackages = with pkgs; [
     firefox
