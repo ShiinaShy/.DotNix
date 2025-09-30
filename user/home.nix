@@ -27,6 +27,7 @@
         shellAliases = {
           dotnix = "cd ~/.DotNix";
           flakebuild = "sudo nixos-rebuild switch --flake .";
+          flaketest = "sudo nixos-rebuild test --flake .";
           nnvim = "alacritty -e nvim & disown";
         };
       };
