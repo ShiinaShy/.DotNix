@@ -31,7 +31,7 @@
 
         
         " Paste without copy
-        xnoremap <leader>p "\"_dP
+        xnoremap <leader>p "_dP
 
         " Open Telescope
         nnoremap <leader>g <cmd>Telescope find_files<cr>
