@@ -25,6 +25,7 @@
           modules = [
             ./deskbottom/configuration.nix
             ./user/home.nix
+            ./system/mathematica.nix
             inputs.home-manager.nixosModules.default
           ];
         };
