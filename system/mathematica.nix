@@ -1,5 +1,6 @@
 # This is a module to import if I wanna install Mathematica
-# It is required to download the Mathematica install script from the website (rename file from uni to fit description silly) and add it to the nix-store manually using:
+# It is required to download the Mathematica install script (rename file from uni to fit description silly) 
+# Add it to the nix-store manually using:
 # nix-store --query --hash \
 # $(nix store add-path Mathematica_XX.X.X_BNDL_LINUX.sh --name 'Mathematica_XX.X.X_BNDL_LINUX.sh')
 # Then replace the resulting hash
