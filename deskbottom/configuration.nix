@@ -9,7 +9,7 @@
       ../system/hyprland.nix
       ../system/utils.nix
       ../system/programms.nix
-      ../system/environment.nix
+      ../system/coding.nix
     ];
 
   # Bootloader.
