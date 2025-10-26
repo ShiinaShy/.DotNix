@@ -1,5 +1,5 @@
 # GTK Config
-{ config, lib, pkgs, ...}:
+{ pkgs, ...}:
 {
   home-manager.users.shiina = {config, ...}:
     let
@@ -13,8 +13,6 @@
           package = pkgs.papirus-icon-theme;
         };
         theme = {
-          # name = "Omni";
-          # package = pkgs.omni-gtk-theme;
           name = "adw-gtk3";
           package = pkgs.adw-gtk3;
         };
@@ -25,17 +23,19 @@
         platformTheme.name = "qt5ct";
         style.name = "kvantum";
       };
-      # makes qt6 ColorSchemes work
+      # for qt6 ColorSchemes
       home.file.".config/kdeglobals".text =
       ''
         [UiSettings]
         ColorScheme=*
       '';
 
+      # Set pywal templates
       home.file.".config/wal/templates" = {
         source =  ../configs/wal/templates;
         recursive = true;
       };
+      # Link pywal generated kvantum theme into kvantum directory
       home.file.".config/Kvantum/pywal/pywal.kvconfig".source = config.lib.file.mkOutOfStoreSymlink "/home/shiina/.cache/wal/pywal.kvconfig";
       home.file.".config/Kvantum/pywal/pywal.svg".source = config.lib.file.mkOutOfStoreSymlink "/home/shiina/.cache/wal/pywal.svg";
       home.file.".config/Kvantum/pywal/pywal.json".source = config.lib.file.mkOutOfStoreSymlink "/home/shiina/.cache/wal/pywal.json";
