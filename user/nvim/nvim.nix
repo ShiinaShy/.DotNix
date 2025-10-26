@@ -1,7 +1,7 @@
 # Neovim config
-{ config, lib, pkgs, inputs, ...}:
+{ pkgs, ...}:
 {
-  home-manager.users.shiina = {config, ...}:
+  home-manager.users.shiina = {...}:
   let
     toLua = str: "lua << EOF\n${str}\nEOF\n";
     fileToLua = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
@@ -13,6 +13,7 @@
         set expandtab
         set tabstop=4
         set shiftwidth=4
+        set nowrap
 
         set number relativenumber
         set signcolumn=yes
