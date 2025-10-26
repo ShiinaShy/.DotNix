@@ -6,10 +6,13 @@
   # Enable gnome-keyring
   services.gnome.gnome-keyring.enable = true;
   security.pam.sshAgentAuth.enable = true;
+  # Set ssh config
   programs.ssh.extraConfig = ''
     Host github.com
     IdentityFile ~/.ssh/github
   '';
+  # Enable zsh
+  programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
     firefox
