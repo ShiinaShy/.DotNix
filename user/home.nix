@@ -88,9 +88,6 @@
     home.file.".config/rofi/config.rasi".source = ../configs/rofi/config.rasi;
     home.file.".config/mako/config".source = ../configs/mako/config;
 
-    home.file.".config/zed/keymap.json".source = ../configs/zed/keymap.json;
-    home.file.".config/zed/settings.json".source = ../configs/zed/settings.json;
-
     # The state version is required and should stay at the version you originally installed.
     home.stateVersion = "23.11";
   };
