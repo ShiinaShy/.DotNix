@@ -1,41 +1,16 @@
-{config, pkgs, inputs, ...}:
+{ inputs, ...}:
 {
   imports = [
     inputs.home-manager.nixosModules.default
     ./theme.nix
     ./hyprland.nix
     ./nvim/nvim.nix
+    ./tty.nix
   ];
 
-
-  home-manager.users.shiina = { config, pkgs, ... }: {
+  home-manager.users.shiina = { ... }: {
     home.packages = [];
     programs = {
-      bash.enable = true;
-      zsh = {
-        enable = true;
-        enableCompletion = true;
-        autosuggestion.enable = true;
-        autosuggestion.highlight = "fg=red,italic,underline";
-        syntaxHighlighting = {
-          enable = true;
-          styles = {
-            "alias" = "fg=magenta,bold";
-            "command" = "fg=cyan";
-          };
-        };
-        shellAliases = {
-          dotnix = "cd ~/.DotNix";
-          flakebuild = "sudo nixos-rebuild switch --flake .";
-          flaketest = "sudo nixos-rebuild test --flake .";
-          nnvim = "alacritty -e nvim & disown";
-        };
-      };
-      git = {
-        enable = true;
-        userName = "Shiina";
-        userEmail = "shiina.shy@gibhug.com";
-      };
       librewolf = {
         enable = true;
         settings = {
@@ -55,22 +30,6 @@
             "general.autoScroll" = true;
             "mail.accounthub.enabled" = false;
           };
-        };
-      };
-      btop = {
-        enable = true;
-        settings = {
-          color_theme = "TTY";
-          theme_background = false;
-        };
-      };
-      alacritty = {
-        enable = true;
-        settings = {
-          window.padding = { x = 10; y = 5; };
-          general.import = ["~/.cache/wal/alacritty.toml"];
-          terminal.shell.program = "zsh";
-          font.normal.family = "Profont IIx Nerd Font Mono"; 
         };
       };
     };
