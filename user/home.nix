@@ -64,10 +64,18 @@
           theme_background = false;
         };
       };
+      alacritty = {
+        enable = true;
+        settings = {
+          window.padding = { x = 10; y = 5; };
+          general.import = ["~/.cache/wal/alacritty.toml"];
+          terminal.shell.program = "zsh";
+          font.normal.family = "Profont IIx Nerd Font Mono"; 
+        };
+      };
     };
 
     # Set Config Files:
-    home.file.".config/alacritty/alacritty.toml".source = ../configs/alacritty/alacritty.toml;
     home.file.".config/GIMP/3.0" = {
       # Hacky but works :3c
       source =  ../configs/GIMP;
