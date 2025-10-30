@@ -2,8 +2,11 @@
 { pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
+    # ZIG <3 
     zig
     zls
     nixd
+    # Java qwq
+    jetbrains.idea-community
   ];
 }

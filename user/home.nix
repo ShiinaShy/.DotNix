@@ -6,6 +6,7 @@
     ./hyprland.nix
     ./nvim/nvim.nix
     ./tty.nix
+    ./ideavim.nix
   ];
 
   home-manager.users.shiina = { ... }: {
