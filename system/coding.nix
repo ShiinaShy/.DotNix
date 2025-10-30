@@ -7,6 +7,6 @@
     zls
     nixd
     # Java qwq
-    jetbrains.idea-community
+    jetbrains.idea-ultimate
   ];
 }
