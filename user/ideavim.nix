@@ -1,21 +1,23 @@
 # i hate intellij but i have to qwq
 {...}:
 {
-  home-manager.user.shiina = {...}: {
+  home-manager.users.shiina = {...}: {
     home.file.".ideavimrc".text = ''
       set expandtab
       set tabstop=4
       set shiftwidth=4
       set nowrap
-
       set number relativenumber
       set signcolumn=yes
+
+      " Who came up with this???
       set visualbell
 
-
+      " Set leader to space
       nnoremap <SPACE> <Nop>
       let mapleader=" "
 
+      " Default to system clipboard 
       set clipboard+=unnamedplus
 
       " Paste without copy
@@ -27,20 +29,27 @@
       nmap <leader>c <Action>(GotoClass)
       " Run Programm
       nmap <leader>r <Action>(Run)
-      " AAAAAAAAAAAAA
-      nmap <C-j> <Down>
-      nmap <C-k> <Up>
+
+      " Select autocomplete
+      nmap <C-n> <Action>(EditorDown) 
+      nmap <C-p> <Action>(EditorUp) 
 
       " Go tab left and right
       nmap <A-.> <Action>(NextTab)
       nmap <A-,> <Action>(PreviousTab)
       nmap <A-c> <Action>(CloseTab)
 
-      " NvimTreeOpen
-      nmap <leader>- <cmd>NvimTreeToggle<cr>
-
+      " Show error
+      nmap <leader>e <Action>(ShowErrorDescription)
+      " Reformat Code
+      nmap <leader>f <Action>(ReformatCode)
       " Evil save
-      nmap <C-s> <cmd>w<cr>
+      nmap <C-s> <Action>(SaveAll)
+
+      " Set debug break, run, continue
+      nmap <leader>db <Action>(ToggleLineBreakpoint)
+      nmap <leader>dr <Action>(Debug)
+      nmap <leader>dc <Action>(Resume)
     '';
   };   
 }
