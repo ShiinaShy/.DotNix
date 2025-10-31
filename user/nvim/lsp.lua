@@ -57,3 +57,4 @@ vim.lsp.config('zls', {
     on_attach = on_attach,
     capabilities = capabilities,
 });
+vim.lsp.enable('tinymist');

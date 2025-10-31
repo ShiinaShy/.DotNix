@@ -8,5 +8,8 @@
     nixd
     # Java qwq
     jetbrains.idea-ultimate
+    # Typst
+    tinymist
+    websocat
   ];
 }

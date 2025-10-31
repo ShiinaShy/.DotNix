@@ -104,7 +104,19 @@
         (nvim-treesitter.withPlugins (p: [
           p.tree-sitter-nix
           p.tree-sitter-zig
+          p.tree-sitter-typst
         ]))
+        
+        # Typst
+        {
+          plugin = typst-preview-nvim;
+          config = toLua ''require('typst-preview').setup{
+              dependencies_bin = {
+                ['tinymist'] = nil,
+                ['websocat'] = nil
+              },
+          }'';
+        }
       ];
     };
 
