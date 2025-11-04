@@ -11,5 +11,6 @@
     # Typst
     tinymist
     websocat
+    typst
   ];
 }
