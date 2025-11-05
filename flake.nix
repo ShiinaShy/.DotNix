@@ -25,7 +25,7 @@
           modules = [
             ./deskbottom/configuration.nix
             ./user/home.nix
-            ./system/mathematica.nix
+            # ./system/mathematica.nix
             inputs.home-manager.nixosModules.default
           ];
         };
@@ -38,7 +38,7 @@
        	modules = [
        	  inputs.nixos-hardware.nixosModules.framework-13-7040-amd
        	  ./lapbottom/configuration.nix
-          ./system/mathematica.nix
+          # ./system/mathematica.nix
        	  ./user/home.nix
           inputs.home-manager.nixosModules.default
        	];
