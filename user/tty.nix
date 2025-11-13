@@ -41,8 +41,10 @@
       };
       git = {
         enable = true;
-        userName = "Shiina";
-        userEmail = "shiina.shy@gibhug.com";
+        settings = {
+          user.name = "Shiina";
+          user.email = "shiina.shy@gibhug.com";
+        };
       };
     };
   };
