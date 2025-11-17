@@ -11,7 +11,7 @@
     Host github.com
     IdentityFile ~/.ssh/github
     Host gitlab.kit.edu
-    IdentityFile ~/.ssh/KIThub
+    IdentityFile ~/.ssh/KITlab
   '';
   # Enable zsh
   programs.zsh.enable = true;
