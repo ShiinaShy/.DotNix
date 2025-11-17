@@ -10,6 +10,8 @@
   programs.ssh.extraConfig = ''
     Host github.com
     IdentityFile ~/.ssh/github
+    Host gitlab.kit.edu
+    IdentityFile ~/.ssh/KIThub
   '';
   # Enable zsh
   programs.zsh.enable = true;
