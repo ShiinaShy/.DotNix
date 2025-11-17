@@ -30,6 +30,13 @@
           general.import = ["~/.cache/wal/alacritty.toml"];
           terminal.shell.program = "zsh";
           font.normal.family = "Profont IIx Nerd Font Mono"; 
+          keyboard.bindings = [
+            {
+              key = "C";
+              mods = "Control";
+              action = "ToggleViMode";
+            }
+          ];
         };
       };
       btop = {
