@@ -7,6 +7,7 @@
     ./nvim/nvim.nix
     ./tty.nix
     ./ideavim.nix
+    ./waybar/waybar.nix
   ];
 
   home-manager.users.shiina = { ... }: {
@@ -41,10 +42,10 @@
       source =  ../configs/GIMP;
       recursive = true;
     };
-    home.file.".config/waybar" = {
-      source =  ../configs/waybar;
-      recursive = true;
-    };
+    # home.file.".config/waybar" = {
+    #   source =  ../configs/waybar;
+    #   recursive = true;
+    # };
     home.file.".config/rofi/config.rasi".source = ../configs/rofi/config.rasi;
     home.file.".config/mako/config".source = ../configs/mako/config;
 

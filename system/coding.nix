@@ -8,6 +8,7 @@
     nixd
     # Java qwq
     jetbrains.idea-ultimate
+    jdk21
     # Typst
     tinymist
     websocat

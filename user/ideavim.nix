@@ -9,6 +9,7 @@
       set nowrap
       set number relativenumber
       set signcolumn=yes
+      set commentary
 
       " Who came up with this???
       set visualbell

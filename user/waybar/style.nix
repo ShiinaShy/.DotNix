@@ -1,12 +1,16 @@
 {...}:
 let
-  borderRad = "5px";
-  padding = "0px 7px";
-  margin = "7px 15px 3px 15px";
+  fontSize = "15px";
+  borderRad = "10px";
+  paddingLR = "7px";
+  padding = "0px ${paddingLR}";
+  marginT = "7px";
+  marginB = "3px";
+  margin = "${marginT} 0px ${marginB} 0px";
 in {
   home-manager.users.shiina = {...}: {
-    home.file.".config/waybar/style.csss".text = ''
-      /* import pywal colors */
+    home.file.".config/waybar/style.css".text = ''
+      /* Import PyWal Colors */
       @import '../../.cache/wal/colors-waybar.css';
 
       @define-color lightcol @color14;
@@ -14,15 +18,18 @@ in {
       @define-color backcol rgba(0,0,0,0.3);
       @define-color hovercol alpha(@color3, 0.3);
 
-      /* general */
+
+      /* General */
       * {
-          font-family: profont iix nerd font, monospace;
-          font-size: 15px;
+          font-family: Profont IIx Nerd Font, monospace;
+          font-size: ${fontSize};
       }
+
       window#waybar {
           all:unset;
           /* background-color: green; */
       }
+
       tooltip {
           background: rgba(0,0,0,0.7);
           color: @lightcol;
@@ -36,7 +43,7 @@ in {
       menu {
           background: rgba(0,0,0,0.7);
           color: @lightcol;
-          border-radius: ${borderRad};
+          border-radius: 10px;
       }
       menuitem:hover {
           background: @hovercol;
@@ -47,8 +54,8 @@ in {
           background: @backcol;
           box-shadow: 0px 0px 2px @backcol;
           color: @lightcol;
-          margin: ${margin};
-          padding: ${padding};
+          margin: ${marginT} 15px ${marginB} 15px;
+          padding: ${paddingLR} 10px ${paddingLR} 10px;
           border-radius: ${borderRad};
           transition: all 0.3s ease-in-out;
       }
@@ -60,8 +67,8 @@ in {
       #taskbar {
           background: @backcol;
           box-shadow: 0px 0px 2px @backcol;
-          margin: ${margin};
-          padding: ${padding};
+          margin: ${marginT} 15px ${marginB} 15px;
+          padding: 0px 5px;
           border-radius: ${borderRad};
       }
       #taskbar button {
@@ -81,7 +88,7 @@ in {
       window#waybar.empty #window {
           background-color:transparent;
       }
-       
+
       /* Modules Center */
       #workspaces {
           background: @backcol;
@@ -112,8 +119,8 @@ in {
       #audio {
           background: @backcol;
           box-shadow: 0px 0px 2px @backcol;
-          margin: ${margin};
-          padding: ${padding};
+          margin: ${marginT} 15px ${marginB} 15px;
+          padding: 7px 0px 7px 0px;
           border-radius: ${borderRad};
           transition: all 0.3s ease-in-out;
       }
@@ -126,9 +133,9 @@ in {
           background: @backcol;
           box-shadow: 0px 0px 2px @backcol;
           color: @lightcol;
-          margin: ${margin};
-          padding: ${padding};
-          border-radius: ${borderRad};
+          margin: 7px 15px 3px 15px; /* 3px is top and botton spacing of the container 15px is for the sides*/
+          padding: 7px 10px 7px 10px; /* 7px left and right of text */
+          border-radius: 10px;
           transition: all 0.3s ease-in-out;
       }
       #power-profiles-daemon {
@@ -160,6 +167,6 @@ in {
       #custom-power {
           margin: 0px 5px;
       }
-   '';
+    '';
   };
 }
