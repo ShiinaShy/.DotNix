@@ -32,7 +32,7 @@
           font.normal.family = "Profont IIx Nerd Font Mono"; 
           keyboard.bindings = [
             {
-              key = "C";
+              key = "Q";
               mods = "Control";
               action = "ToggleViMode";
             }
