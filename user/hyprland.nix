@@ -14,7 +14,7 @@ let
   cursorTheme = "McMojave";
   mainMod = "SUPER";
   terminal = "alacritty";
-  fileManager = "pcmanfm";
+  fileManager = "nemo";
   browser = "librewolf";
   menu = "rofi -show drun";
 in {
