@@ -39,7 +39,7 @@
     rofi # programm launcher
     xdg-desktop-portal-gtk # i dunno o.o
     xviewer # image viewver
-    nemo # file browser
+    nemo-with-extensions # file browser
     mako # notifiation
   ];
 
