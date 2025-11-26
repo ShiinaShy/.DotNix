@@ -1,6 +1,7 @@
 {pkgs, vars, ...}:
 let
   mcMojave = import ./mc-mojave-cursor.nix { inherit pkgs; };
+  bibata = import ./bibata-cursor.nix { inherit pkgs; };
 
   # Device specific variables
   monitor = vars.monitor;
@@ -11,7 +12,7 @@ let
   vfr = vars.vfr;
   suspendType = vars.suspendType;
 
-  cursorTheme = "McMojave";
+  cursorTheme = "bibata";
   mainMod = "SUPER";
   terminal = "alacritty";
   fileManager = "nemo";
@@ -35,7 +36,7 @@ in {
 
       # Set cursor Theme
       env = HYPRCURSOR_THEME,${cursorTheme}
-      env = HYPRCURSOR_SIZE,30
+      env = HYPRCURSOR_SIZE,20
 
       # Layerrules
       layerrule = blur,rofi #blur rofi background
@@ -321,6 +322,6 @@ in {
       preload = /home/shiina/.DotNix/configs/hypr/wallpaper.png
       wallpaper = ,/home/shiina/.DotNix/configs/hypr/wallpaper.png
     '';
-    home.file.".icons/McMojave".source = "${mcMojave}";
+    home.file.".icons/bibata".source = "${bibata}";
   };
 }
