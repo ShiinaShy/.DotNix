@@ -88,6 +88,7 @@ in {
       }
       window#waybar.empty #window {
           background-color:transparent;
+          box-shadow: transparent;
       }
 
       /* Modules Center */
