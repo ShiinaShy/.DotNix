@@ -318,9 +318,10 @@ in {
           valign = top
       }
     '';
+    home.file."Images/wallpaper.png".source = ./wallpaper/fox.png;
     home.file.".config/hypr/hyprpaper.conf".text = ''
-      preload = /home/shiina/Images/fop.png
-      wallpaper = ,/home/shiina/Images/fop.png
+      preload = /home/shiina/Images/wallpaper.png
+      wallpaper = ,/home/shiina/Images/wallpaper.png
     '';
     home.file.".icons/bibata".source = "${bibata}";
   };
