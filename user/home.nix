@@ -8,6 +8,7 @@
     ./tty.nix
     ./ideavim.nix
     ./waybar/waybar.nix
+    ./wal/wal.nix
   ];
 
   home-manager.users.shiina = { ... }: {

@@ -1,7 +1,7 @@
 {...}:
 {
   home-manager.users.shiina = {...}: {
-    home.file.".config/wal/hyprland-cols.conf".text = ''
+    home.file.".config/wal/templates/colors-rofi.rasi".text = ''
       * {{
           background: rgba(0,0,1,0.5);
           foreground: #FFFFFF;

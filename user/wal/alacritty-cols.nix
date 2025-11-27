@@ -1,7 +1,7 @@
 {...}:
 {
   home-manager.users.shiina = {...}: {
-    home.file.".config/wal/alacritty-cols.toml".text = ''
+    home.file.".config/wal/templates/colors-alacritty.toml".text = ''
       [colors]
       [colors.primary]
         foreground = "{foreground}"

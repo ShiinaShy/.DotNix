@@ -1,7 +1,7 @@
 {...}:
 {
   home-manager.users.shiina = {...}: {
-    home.file.".config/wal/waybar-cols.css".text = ''
+    home.file.".config/wal/templates/colors-waybar.css".text = ''
       @define-color foreground {foreground};
       @define-color background {background};
       @define-color cursor {cursor};

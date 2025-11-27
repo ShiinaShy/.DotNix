@@ -1,7 +1,7 @@
 {...}:
 {
   home-manager.users.shiina = {...}: {
-    home.file.".config/wal/gtk-cols.css".text = ''
+    home.file.".config/wal/templates/colors-gtk.css".text = ''
       @define-color window_bg_color {background};
       @define-color window_fg_color {color14};
       @define-color view_bg_color {background};
