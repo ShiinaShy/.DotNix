@@ -319,8 +319,8 @@ in {
       }
     '';
     home.file.".config/hypr/hyprpaper.conf".text = ''
-      preload = /home/shiina/.DotNix/configs/hypr/wallpaper.png
-      wallpaper = ,/home/shiina/.DotNix/configs/hypr/wallpaper.png
+      preload = /home/shiina/Images/fop.png
+      wallpaper = ,/home/shiina/Images/fop.png
     '';
     home.file.".icons/bibata".source = "${bibata}";
   };
