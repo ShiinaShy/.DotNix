@@ -7,6 +7,7 @@ let
   marginT = "7px";
   marginB = "3px";
   margin = "${marginT} 0px ${marginB} 0px";
+  alpha = "0.9";
 in {
   home-manager.users.shiina = {...}: {
     home.file.".config/waybar/style.css".text = ''
@@ -15,7 +16,7 @@ in {
 
       @define-color lightcol @color14;
       @define-color darkcol @color11;
-      @define-color backcol rgba(0,0,0,0.3);
+      @define-color backcol alpha(@background, ${alpha});
       @define-color hovercol alpha(@color3, 0.3);
 
 
