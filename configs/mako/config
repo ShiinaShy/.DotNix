@@ -1,5 +1,5 @@
 # Include Pywal to set Font color
-include=~/.cache/wal/mako
+include=~/.cache/wal/colors-mako
 
 # Behaviour
 sort=-time

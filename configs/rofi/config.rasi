@@ -9,7 +9,7 @@
  *║   by Shiina                 ║
  *╚═════════════════════════════╝
  */
-@import "~/.cache/wal/colors-rofi-pywal"
+@import "~/.cache/wal/colors-rofi"
 
 /* Main */
 * { border-width: 0px;
