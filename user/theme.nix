@@ -30,15 +30,13 @@
         ColorScheme=*
       '';
 
-      # Set pywal templates
-      home.file.".config/wal/templates" = {
-        source =  ../configs/wal/templates;
-        recursive = true;
-      };
       # Link pywal generated kvantum theme into kvantum directory
       home.file.".config/Kvantum/pywal/pywal.kvconfig".source = config.lib.file.mkOutOfStoreSymlink "/home/shiina/.cache/wal/pywal.kvconfig";
       home.file.".config/Kvantum/pywal/pywal.svg".source = config.lib.file.mkOutOfStoreSymlink "/home/shiina/.cache/wal/pywal.svg";
       home.file.".config/Kvantum/pywal/pywal.json".source = config.lib.file.mkOutOfStoreSymlink "/home/shiina/.cache/wal/pywal.json";
-      home.file.".config/Kvantum/kvantum.kvconfig".source = ../configs/Kvantum/kvantum.kvconfig;
+      home.file.".config/Kvantum/kvantum.kvconfig".text = ''
+        [General]
+        theme=pywal     
+      '';
     };
 }
