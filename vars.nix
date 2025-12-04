@@ -1,11 +1,11 @@
 {
   deskbottom = {
     monitor = ''
-      monitor=DP-1,3440x1440@144,auto-left,1,vrr,1
+      monitor=DP-1,3440x1440@144,auto-left,1,vrr,2
       monitor=DP-2,1920x1080@60,auto-right,1
     '';
     autoStart = "waybar & hyprpaper & discord & keepassxc & kdeconnect-indicator";
-    workspaceRules = "workspace = 5, monitor:DP-3, default:true";
+    workspaceRules = "workspace = 5, monitor:DP-2, default:true";
     blur = "true";
     shadow = "true";
     vfr = "false";
