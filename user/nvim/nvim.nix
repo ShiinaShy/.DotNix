@@ -36,15 +36,16 @@
 
         " Open Telescope
         nnoremap <leader>g <cmd>Telescope find_files<cr>
+        nnoremap <leader>f <cmd>Telescope lsp_document_symbols<cr>
 
         " NvimTreeOpen
         nnoremap <leader>- <cmd>NvimTreeToggle<cr>
 
         " Auto Brackets
-        inoremap ( ()<Left>
-        inoremap [ []<Left>
-        inoremap { {}<Left>
-        inoremap <expr> <CR> search('{\%#}', 'n') ? "\<CR>\<CR>\<Up>\<C-f>" : "\<CR>"
+        " inoremap ( ()<Left>
+        " inoremap [ []<Left>
+        " inoremap { {}<Left>
+        " inoremap <expr> <CR> search('{\%#}', 'n') ? "\<CR>\<CR>\<Up>\<C-f>" : "\<CR>"
 
         " Evil save
         nnoremap <C-s> <cmd>w<cr>
