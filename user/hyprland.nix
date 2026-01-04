@@ -39,9 +39,9 @@ in {
       env = HYPRCURSOR_SIZE,20
 
       # Layerrules
-      layerrule = blur,rofi #blur rofi background
+      layerrulev2 = blur,namespace:rofi #blur rofi background
 
-      # Workspace rules
+      # Workspace rulesvar
       ${workspaceRules}
 
       # Keybinds
@@ -320,8 +320,11 @@ in {
     '';
     home.file."Images/wallpaper.png".source = ./wallpaper/fox.png;
     home.file.".config/hypr/hyprpaper.conf".text = ''
-      preload = /home/shiina/Images/wallpaper.png
-      wallpaper = ,/home/shiina/Images/wallpaper.png
+      wallpaper {
+          monitor = 
+          path = /home/shiina/Images/wallpaper.png
+          fit_mode = cover
+      }
     '';
     home.file.".icons/bibata".source = "${bibata}";
   };
