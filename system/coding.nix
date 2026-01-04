@@ -7,7 +7,7 @@
     zls
     nixd
     # Java qwq
-    jetbrains.idea-ultimate
+    jetbrains.idea
     jdk21
     # Typst
     tinymist
