@@ -42,10 +42,10 @@
         nnoremap <leader>- <cmd>NvimTreeToggle<cr>
 
         " Auto Brackets
-        " inoremap ( ()<Left>
-        " inoremap [ []<Left>
-        " inoremap { {}<Left>
-        " inoremap <expr> <CR> search('{\%#}', 'n') ? "\<CR>\<CR>\<Up>\<C-f>" : "\<CR>"
+        inoremap ( ()<Left>
+        inoremap [ []<Left>
+        inoremap { {}<Left>
+        inoremap <expr> <CR> search('{\%#}', 'n') ? "\<CR>\<CR>\<Up>\<C-f>" : "\<CR>"
 
         " Evil save
         nnoremap <C-s> <cmd>w<cr>
