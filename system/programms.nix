@@ -3,6 +3,7 @@
 {
   # Enable KDEConnect
   programs.kdeconnect.enable = true;
+
   # Enable gnome-keyring
   services.gnome.gnome-keyring.enable = true;
   security.pam.sshAgentAuth.enable = true;
@@ -23,7 +24,6 @@
     gimp3
     keepassxc
     nheko
-    kdePackages.qt6ct #needed for nheko themeing
     (pkgs.discord.override { withOpenASAR = true;})
     thunderbird
     protonmail-bridge-gui
