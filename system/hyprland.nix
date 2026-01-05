@@ -5,7 +5,7 @@
   #boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
   #boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
 
-  programs.bash.shellInit = ''start-hyprland'';
+  # programs.bash.shellInit = ''start-hyprland'';
 
   # required for some file manager features like trash 
   services.gvfs.enable = true;
