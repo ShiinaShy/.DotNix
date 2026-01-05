@@ -325,6 +325,7 @@ in {
           path = /home/shiina/Images/wallpaper.png
           fit_mode = cover
       }
+      splash = false
     '';
     home.file.".icons/bibata".source = "${bibata}";
   };
