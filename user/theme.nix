@@ -24,6 +24,7 @@
           package = pkgs.adw-gtk3;
         };
         gtk3.extraCss = adw-color;
+        gtk4.extraCss = adw-color;
       };
       qt = {
         enable = true;
@@ -35,6 +36,9 @@
       ''
         [UiSettings]
         ColorScheme=*
+        [General]
+        TerminalApplication=alacritty
+        TerminalService=Alacritty.desktop
       '';
 
       # Link pywal generated kvantum theme into kvantum directory
