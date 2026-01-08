@@ -2,7 +2,10 @@
 { pkgs, ...}:
 {
   # Enable KDEConnect
-  programs.kdeconnect.enable = true;
+  programs.kdeconnect = {
+    enable = true;
+    # package = pkgs.valent; # no indicator
+  };
 
   # Enable gnome-keyring
   services.gnome.gnome-keyring.enable = true;
