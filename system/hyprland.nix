@@ -42,6 +42,7 @@
     xdg-desktop-portal-gtk # i dunno o.o
     xviewer # image viewver
     nemo-with-extensions # file browser
+    kdePackages.dolphin # alternative file browser
     mako # notifiation
   ];
 
