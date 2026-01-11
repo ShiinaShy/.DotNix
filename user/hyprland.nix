@@ -15,7 +15,7 @@ let
   cursorTheme = "bibata";
   mainMod = "SUPER";
   terminal = "alacritty";
-  fileManager = "dolphin";
+  fileManager = "nemo";
   browser = "librewolf";
   menu = "rofi -show drun";
 in {
