@@ -17,6 +17,7 @@
       librewolf = {
         enable = true;
         settings = {
+          "widget.gtk.libadwaita-colors.enabled" = false;
           "general.autoScroll" = true;
           "browser.toolbars.bookmarks.visibility" = "newtab";
           "browser.compactmode.show" = true;
@@ -27,6 +28,8 @@
         profiles.default = {
           isDefault = true;
           settings = {
+            "widget.gtk.libadwaita-colors.enabled" = false;
+            "widget.gtk.native-context-menus" = true;
             "mail.ui.display.dateformat.today" = 2;
             "mailnews.wraplength" = 0;
             "intl.regional_prefs.use_os_locales" = true;
