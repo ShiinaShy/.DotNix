@@ -6,6 +6,8 @@
     ./hyprland.nix
     ./nvim/nvim.nix
     ./tty.nix
+    ./rofi.nix
+    ./mako.nix
     ./ideavim.nix
     ./waybar/waybar.nix
     ./wal/wal.nix
@@ -40,18 +42,11 @@
       };
     };
 
-    # Set Config Files:
+    # Set gimp configs in a hacky way :3c
     home.file.".config/GIMP/3.0" = {
-      # Hacky but works :3c
-      source =  ../configs/GIMP;
+      source =  ./gimp;
       recursive = true;
     };
-    # home.file.".config/waybar" = {
-    #   source =  ../configs/waybar;
-    #   recursive = true;
-    # };
-    home.file.".config/rofi/config.rasi".source = ../configs/rofi/config.rasi;
-    home.file.".config/mako/config".source = ../configs/mako/config;
 
     # The state version is required and should stay at the version you originally installed.
     home.stateVersion = "23.11";
