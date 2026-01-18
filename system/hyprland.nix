@@ -1,11 +1,14 @@
 # All programms needed to create a "Desktop Enviroment"
-{ config, pkgs, inputs, ...}:
+{ pkgs, ...}:
 {
-  # Enable ddcci kernel Module (had to disable because i have the ONE FUCKING MONITOR THAT BREAKS?! qwq https://github.com/rockowitz/ddcutil/issues/153)
+  # Enable ddcci kernel Module (had to disable because i have the ONE monitor that gets bricked qwq https://github.com/rockowitz/ddcutil/issues/153)
   #boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
   #boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
 
-  # Fix Filemanager Stuff
+  # Breaks QT themes
+  # programs.bash.shellInit = ''start-hyprland'';
+
+  # required for some file manager features like trash 
   services.gvfs.enable = true;
 
   # Enable Audio
@@ -25,7 +28,7 @@
     };
     hyprlock.enable = true;
   };
-  # Electron use Wayland
+  # Make Electron use Wayland
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
@@ -39,7 +42,8 @@
     rofi # programm launcher
     xdg-desktop-portal-gtk # i dunno o.o
     xviewer # image viewver
-    pcmanfm # file browser
+    nemo-with-extensions # file browser
+    kdePackages.dolphin # alternative file browser
     mako # notifiation
   ];
 

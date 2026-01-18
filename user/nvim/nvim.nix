@@ -1,7 +1,7 @@
 # Neovim config
-{ config, lib, pkgs, inputs, ...}:
+{ pkgs, ...}:
 {
-  home-manager.users.shiina = {config, ...}:
+  home-manager.users.shiina = {...}:
   let
     toLua = str: "lua << EOF\n${str}\nEOF\n";
     fileToLua = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
@@ -13,6 +13,7 @@
         set expandtab
         set tabstop=4
         set shiftwidth=4
+        set nowrap
 
         set number relativenumber
         set signcolumn=yes
@@ -35,6 +36,7 @@
 
         " Open Telescope
         nnoremap <leader>g <cmd>Telescope find_files<cr>
+        nnoremap <leader>f <cmd>Telescope lsp_document_symbols<cr>
 
         " NvimTreeOpen
         nnoremap <leader>- <cmd>NvimTreeToggle<cr>
@@ -103,7 +105,19 @@
         (nvim-treesitter.withPlugins (p: [
           p.tree-sitter-nix
           p.tree-sitter-zig
+          p.tree-sitter-typst
         ]))
+        
+        # Typst
+        {
+          plugin = typst-preview-nvim;
+          config = toLua ''require('typst-preview').setup{
+              dependencies_bin = {
+                ['tinymist'] = nil,
+                ['websocat'] = nil
+              },
+          }'';
+        }
       ];
     };
 

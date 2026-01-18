@@ -2,14 +2,23 @@
 { pkgs, ...}:
 {
   # Enable KDEConnect
-  programs.kdeconnect.enable = true;
+  programs.kdeconnect = {
+    enable = true;
+    # package = pkgs.valent; # no indicator
+  };
+
   # Enable gnome-keyring
   services.gnome.gnome-keyring.enable = true;
   security.pam.sshAgentAuth.enable = true;
+  # Set ssh config
   programs.ssh.extraConfig = ''
     Host github.com
     IdentityFile ~/.ssh/github
+    Host gitlab.kit.edu
+    IdentityFile ~/.ssh/KITlab
   '';
+  # Enable zsh
+  programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
     firefox
@@ -18,7 +27,6 @@
     gimp3
     keepassxc
     nheko
-    kdePackages.qt6ct #needed for nheko themeing
     (pkgs.discord.override { withOpenASAR = true;})
     thunderbird
     protonmail-bridge-gui
