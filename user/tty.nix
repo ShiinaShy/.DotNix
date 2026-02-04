@@ -22,6 +22,7 @@
           flaketest = "sudo nixos-rebuild test --flake .";
           nnvim = "alacritty -e nvim & disown";
           girl = "man";
+          winboot = "systemctl reboot --boot-loader-entry=auto-windows";
         };
       };
       alacritty = {
