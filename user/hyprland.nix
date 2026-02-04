@@ -73,25 +73,41 @@ in {
       # Suspend System
       bind = ${mainMod}, O, exec,  hyprlock & disown && systemctl ${suspendType} 
       # Lock System
-      bind = ${mainMod}, L, exec, hyprlock & disown
+      bind = ${mainMod}, P, exec, hyprlock & disown
 
       # Move focus with mainMod + arrow keys
       bind = ${mainMod}, left, movefocus, l
       bind = ${mainMod}, right, movefocus, r
       bind = ${mainMod}, up, movefocus, u
       bind = ${mainMod}, down, movefocus, d
+      # Move focus with mainMod + vim directions
+      bind = ${mainMod}, h, movefocus, l
+      bind = ${mainMod}, l, movefocus, r
+      bind = ${mainMod}, k, movefocus, u
+      bind = ${mainMod}, j, movefocus, d
+
 
       # Move window with mainMod + shift + arrow keys
       bind = ${mainMod} SHIFT, left, swapwindow, l
       bind = ${mainMod} SHIFT, right, swapwindow, r
       bind = ${mainMod} SHIFT, up, swapwindow, u
       bind = ${mainMod} SHIFT, down, swapwindow, d
+      # Move window with mainMod + shift + vim directions 
+      bind = ${mainMod} SHIFT, h, swapwindow, l
+      bind = ${mainMod} SHIFT, l, swapwindow, r
+      bind = ${mainMod} SHIFT, k, swapwindow, u
+      bind = ${mainMod} SHIFT, j, swapwindow, d
 
       # Resize windows with maindMOd + ctrl + arrow keys
-      bind = ${mainMod} CTRL, right, resizeactive, 25 0
       bind = ${mainMod} CTRL, left, resizeactive, -25 0
+      bind = ${mainMod} CTRL, right, resizeactive, 25 0
       bind = ${mainMod} CTRL, up, resizeactive, 0 -25
       bind = ${mainMod} CTRL, down, resizeactive, 0 25
+      # Resize windows with maindMOd + ctrl + vim directions 
+      bind = ${mainMod} CTRL, h, resizeactive, -25 0
+      bind = ${mainMod} CTRL, l, resizeactive, 25 0
+      bind = ${mainMod} CTRL, k, resizeactive, 0 -25
+      bind = ${mainMod} CTRL, j, resizeactive, 0 25
 
       # Switch workspaces with mainMod + [0-9]
       bind = ${mainMod}, 1, workspace, 1
