@@ -79,6 +79,7 @@
           plugin = nvim-tree-lua;
           config = fileToLua ./tree.lua;
         }
+        plenary-nvim # required for telescope
         {
           plugin = telescope-fzf-native-nvim;
           config = fileToLua ./telescope.lua;
