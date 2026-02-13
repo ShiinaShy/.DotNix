@@ -39,7 +39,7 @@ in {
       env = HYPRCURSOR_SIZE,20
 
       # Layerrules
-      layerrulev2 = blur,namespace:rofi #blur rofi background
+      layerrule = blur on, match:namespace rofi 
 
       # Workspace rulesvar
       ${workspaceRules}
