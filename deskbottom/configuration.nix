@@ -10,6 +10,7 @@
       ../system/utils.nix
       ../system/programms.nix
       ../system/coding.nix
+      ../system/niri.nix
     ];
 
   # Bootloader.
