@@ -11,6 +11,7 @@
     ./ideavim.nix
     ./waybar/waybar.nix
     ./wal/wal.nix
+    ./niri.nix
   ];
 
   home-manager.users.shiina = { ... }: {
