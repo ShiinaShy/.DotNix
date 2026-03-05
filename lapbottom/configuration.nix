@@ -11,6 +11,7 @@
       ../system/programms.nix
       ../system/coding.nix
       ../system/steam.nix
+      ../system/niri.nix
    ];
 
   # Bootloader.
