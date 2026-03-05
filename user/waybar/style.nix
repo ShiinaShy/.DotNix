@@ -101,7 +101,7 @@ in {
       }
       #workspaces button {
           font-size: 20px;
-          padding: 0px 5px;
+          padding: 0px 5px 0px 0px;
           color: alpha(@darkcol, .3);
           text-shadow: 0px 0px 2px alpha(@darkcol, .3);
           transition: all .2s ease;
