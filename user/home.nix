@@ -1,7 +1,6 @@
-{ inputs, ...}:
+{ ... }:
 {
   imports = [
-    inputs.home-manager.nixosModules.default
     ./theme.nix
     ./hyprland.nix
     ./nvim/nvim.nix
@@ -48,8 +47,5 @@
       source =  ./gimp;
       recursive = true;
     };
-
-    # The state version is required and should stay at the version you originally installed.
-    home.stateVersion = "23.11";
   };
 }
