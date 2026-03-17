@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  _module.args.colors = import (import ./wal/colors.nix { inherit pkgs; });
+  _module.args.colors = import (import ./wal/pywal.nix { inherit pkgs; });
   imports = [
     ./theme.nix
     ./hyprland.nix
