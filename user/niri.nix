@@ -1,4 +1,4 @@
-{pkgs, vars, ...}:
+{pkgs, vars, colors, ...}:
 let
   mcMojave = import ./mc-mojave-cursor.nix { inherit pkgs; };
   bibata = import ./bibata-cursor.nix { inherit pkgs; };
@@ -54,11 +54,7 @@ in {
           xcursor-size 24
       }
 
-      spawn-at-startup "waybar"
-      spawn-at-startup "discord"
-      spawn-at-startup "hyprpaper"
-      spawn-at-startup "keepassxc"
-      spawn-at-startup "kdeconnect-indicator"
+      spawn-sh-at-startup "${autoStart}"
 
       binds {
           ${mainMod}+Shift+Slash { show-hotkey-overlay; }
@@ -174,9 +170,6 @@ in {
               // bottom-right
           }
       }
-
-      include "/home/shiina/.cache/wal/colors-niri.kdl"
-
       layout {
           gaps 10 
 
@@ -196,6 +189,8 @@ in {
           }
           border {
               width 2
+              active-gradient from="${colors.color14}" to="${colors.color12}" angle=45 relative-to="workspace-view"
+              inactive-color "${colors.color1}"
               urgent-color "#9b0000"
           }
 

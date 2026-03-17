@@ -1,7 +1,7 @@
 { colors, ... }:
 {
   home-manager.users.shiina = {...}: {
-    home.file.".config/k/pywal.svg".text = ''
+    home.file.".config/Kvantum/pywal/pywal.svg".text = ''
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
     <svg
        width="450"
@@ -474,7 +474,7 @@
            opacity="0"
            id="rect26" />
         <g
-           fill="{color8.darken(3%)}"
+           fill="${colors.color8m03}"
            id="g32">
           <path
              d="m214.62 670-1.75 1 2.25 3.9063 1.75-1zm20.75 0-2.25 3.9063 1.75 1 2.25-3.9063zm-32.875 19v2h4.5v-2zm40.5 0v2h4.5v-2zm-27.875 16.094-2.25 3.9062 1.75 1 2.25-3.9062zm19.75 0-1.75 1 2.25 3.9062 1.75-1z"
@@ -546,7 +546,7 @@
          y="789.99"
          width="5"
          height="1"
-         fill="{color8.darken(3%)}" />
+         fill="${colors.color8m03}" />
       <g
          id="resize-grip-normal">
         <rect
@@ -600,7 +600,7 @@
            y="1039"
            width="1.75"
            height="32"
-           fill="{color8.darken(3%)}"
+           fill="${colors.color8m03}"
            id="rect68" />
       </g>
       <use
@@ -5329,7 +5329,7 @@
            x="32.808334"
            y="27.78125" />
         <rect
-           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{color11}"
+           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:${colors.color11}"
            id="rect44149"
            width="0.52916664"
            height="1.5875"
@@ -5347,7 +5347,7 @@
            x="34.395832"
            y="26.19375" />
         <rect
-           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{color11}"
+           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:${colors.color11}"
            id="rect44155"
            width="3.175"
            height="0.52916664"
@@ -5363,7 +5363,7 @@
            d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 1.5875 z" />
         <path
            id="use44161"
-           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{color11}"
+           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:${colors.color11}"
            d="m 39.158333,27.78125 c 0,-0.879475 -0.708025,-1.5875 -1.5875,-1.5875 v 0.529167 c 0.586317,0 1.058334,0.472016 1.058334,1.058333 z" />
       </g>
       <g
@@ -5376,7 +5376,7 @@
            transform="scale(0.26458333)" />
         <path
            id="path44167"
-           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{color11}"
+           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0943911;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:${colors.color11}"
            d="m 130,99 c -3.324,0 -6,2.676 -6,6 h 2 c 0,-2.216 1.784,-4 4,-4 z"
            transform="scale(0.26458333)" />
       </g>
@@ -5389,7 +5389,7 @@
            d="m 37.570833,30.95625 c 0.879475,0 1.5875,-0.708025 1.5875,-1.5875 h -1.5875 z" />
         <path
            id="use44173"
-           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{color11}"
+           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:${colors.color11}"
            d="m 37.570833,30.95625 c 0.879475,0 1.5875,-0.708025 1.5875,-1.5875 h -0.529167 c 0,0.586317 -0.472016,1.058334 -1.058333,1.058334 z" />
       </g>
       <g
@@ -5401,7 +5401,7 @@
            d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -1.5875 z" />
         <path
            id="use44179"
-           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{color11}"
+           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0249743;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:${colors.color11}"
            d="m 32.808333,29.36875 c 0,0.879475 0.708025,1.5875 1.5875,1.5875 v -0.529167 c -0.586317,0 -1.058334,-0.472016 -1.058334,-1.058333 z" />
       </g>
       <g
@@ -5416,7 +5416,7 @@
            y="27.78125"
            transform="scale(-1,1)" />
         <rect
-           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{color11}"
+           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0144189;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:${colors.color11}"
            id="use44185"
            width="0.52916664"
            height="1.5875"
@@ -5436,7 +5436,7 @@
            y="-30.956251"
            transform="scale(1,-1)" />
         <rect
-           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:{color11}"
+           style="opacity:0.15;fill:${colors.color11};stroke:none;stroke-width:0.0203914;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers;stop-color:${colors.color11}"
            id="use44191"
            width="3.175"
            height="0.52916664"
@@ -6252,7 +6252,7 @@
            y="95"
            ry="4" />
         <path
-           style="color:${colors.color15};fill:{color15};stroke-linecap:round;-inkscape-stroke:none"
+           style="color:${colors.color15};fill:${colors.color15};stroke-linecap:round;-inkscape-stroke:none"
            d="m 338.65039,99.240234 a 1,1 0 0 0 -1.41016,0.109375 l -5.29687,6.179691 -3.23633,-3.23633 a 1,1 0 0 0 -1.41406,0 1,1 0 0 0 0,1.41406 l 4.76367,4.76367 6.70313,-7.82031 a 1,1 0 0 0 -0.10938,-1.410156 z"
            id="path2530" />
       </g>
@@ -6268,7 +6268,7 @@
            y="95"
            ry="4" />
         <path
-           style="color:${colors.color15};fill:{color15};stroke-linecap:round;-inkscape-stroke:none"
+           style="color:${colors.color15};fill:${colors.color15};stroke-linecap:round;-inkscape-stroke:none"
            d="m 338.65039,99.240234 a 1,1 0 0 0 -1.41016,0.109375 l -5.29687,6.179691 -3.23633,-3.23633 a 1,1 0 0 0 -1.41406,0 1,1 0 0 0 0,1.41406 l 4.76367,4.76367 6.70313,-7.82031 a 1,1 0 0 0 -0.10938,-1.410156 z"
            id="path2530-5" />
       </g>
@@ -6284,7 +6284,7 @@
            y="95"
            ry="4" />
         <path
-           style="color:${colors.color15};fill:{color15};stroke-linecap:round;-inkscape-stroke:none"
+           style="color:${colors.color15};fill:${colors.color15};stroke-linecap:round;-inkscape-stroke:none"
            d="m 328,102 a 1,1 0 0 0 -1,1 1,1 0 0 0 1,1 h 4 6 a 1,1 0 0 0 1,-1 1,1 0 0 0 -1,-1 h -6 z"
            id="path2530-5-9" />
       </g>
@@ -6300,7 +6300,7 @@
            y="95"
            ry="4" />
         <path
-           style="color:${colors.color15};fill:{color15};stroke-linecap:round;-inkscape-stroke:none"
+           style="color:${colors.color15};fill:${colors.color15};stroke-linecap:round;-inkscape-stroke:none"
            d="m 328,102 a 1,1 0 0 0 -1,1 1,1 0 0 0 1,1 h 4 6 a 1,1 0 0 0 1,-1 1,1 0 0 0 -1,-1 h -6 z"
            id="path2530-5-9-7" />
       </g>
@@ -6484,7 +6484,7 @@
            y="126"
            ry="4" />
         <path
-           style="color:${colors.color15};fill:{color15};stroke-linecap:round;-inkscape-stroke:none"
+           style="color:${colors.color15};fill:${colors.color15};stroke-linecap:round;-inkscape-stroke:none"
            d="m 292.65039,130.24023 a 1,1 0 0 0 -1.41016,0.10938 l -5.29687,6.17969 -3.23633,-3.23633 a 1,1 0 0 0 -1.41406,0 1,1 0 0 0 0,1.41406 l 4.76367,4.76367 6.70313,-7.82031 a 1,1 0 0 0 -0.10938,-1.41016 z"
            id="path2530-3" />
       </g>
@@ -6508,7 +6508,7 @@
            y="126"
            ry="4" />
         <path
-           style="color:${colors.color15};fill:{color15};stroke-linecap:round;-inkscape-stroke:none"
+           style="color:${colors.color15};fill:${colors.color15};stroke-linecap:round;-inkscape-stroke:none"
            d="m 292.65039,130.24023 a 1,1 0 0 0 -1.41016,0.10938 l -5.29687,6.17969 -3.23633,-3.23633 a 1,1 0 0 0 -1.41406,0 1,1 0 0 0 0,1.41406 l 4.76367,4.76367 6.70313,-7.82031 a 1,1 0 0 0 -0.10938,-1.41016 z"
            id="path2530-5-6" />
       </g>
@@ -6532,7 +6532,7 @@
            y="126"
            ry="4" />
         <path
-           style="color:${colors.color15};fill:{color15};stroke-linecap:round;-inkscape-stroke:none"
+           style="color:${colors.color15};fill:${colors.color15};stroke-linecap:round;-inkscape-stroke:none"
            d="m 282,133 a 1,1 0 0 0 -1,1 1,1 0 0 0 1,1 h 4 6 a 1,1 0 0 0 1,-1 1,1 0 0 0 -1,-1 h -6 z"
            id="path2530-5-9-1" />
       </g>
@@ -6556,7 +6556,7 @@
            y="126"
            ry="4" />
         <path
-           style="color:${colors.color15};fill:{color15};stroke-linecap:round;-inkscape-stroke:none"
+           style="color:${colors.color15};fill:${colors.color15};stroke-linecap:round;-inkscape-stroke:none"
            d="m 282,133 a 1,1 0 0 0 -1,1 1,1 0 0 0 1,1 h 4 6 a 1,1 0 0 0 1,-1 1,1 0 0 0 -1,-1 h -6 z"
            id="path2530-5-9-7-9" />
       </g>

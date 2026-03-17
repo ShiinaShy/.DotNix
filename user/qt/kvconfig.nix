@@ -1,7 +1,7 @@
 { colors, ... }:
 {
   home-manager.users.shiina = {...}: {
-    home.file.".config/k/pywal.kvconfig".text = ''
+    home.file.".config/Kvantum/pywal/pywal.kvconfig".text = ''
     [%General]
     author=Vince Liuice, based on KvAdapta by Tsu Jan
     comment=An uncomplicated theme inspired by the Materia GTK theme

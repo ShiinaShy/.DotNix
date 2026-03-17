@@ -3,7 +3,7 @@
 pkgs.stdenv.mkDerivation {
   name = "pywal colors";
 
-  src = builtins.readFile ./a.nix;
+  src = builtins.readFile ./pywal-colors.nix;
   wallpaper = ../wallpaper/fox.png;
   nativeBuildInputs = [ pkgs.pywal16 ];
 
@@ -18,9 +18,9 @@ pkgs.stdenv.mkDerivation {
     export XDG_CONFIG_HOME=$HOME/.config
     mkdir $XDG_CONFIG_HOME/wal
     mkdir $XDG_CONFIG_HOME/wal/templates
-    echo $src > $HOME/.config/wal/templates/nix.nix
+    echo $src > $HOME/.config/wal/templates/cols.nix
     mkdir garbage
     wal -i $wallpaper --cols16 --out-dir garbage
-    mv garbage/nix.nix $out
+    mv garbage/cols.nix $out
   '';
 }

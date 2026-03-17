@@ -1,7 +1,7 @@
 { colors, ... }:
 {
   home-manager.users.shiina = {...}: {
-    home.file.".config/k/pywal.json".text = ''
+    home.file.".config/Kvantum/pywal/pywal.json".text = ''
       {{
           "name": "pywal",
           "variables": {{

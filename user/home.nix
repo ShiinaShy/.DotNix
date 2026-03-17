@@ -1,5 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  _module.args.colors = import (import ./wal/colors.nix { inherit pkgs; });
   imports = [
     ./theme.nix
     ./hyprland.nix
@@ -9,8 +10,8 @@
     ./mako.nix
     ./ideavim.nix
     ./waybar/waybar.nix
-    ./wal/wal.nix
     ./niri.nix
+    ./qt/qt.nix
   ];
 
   home-manager.users.shiina = { ... }: {
