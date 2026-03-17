@@ -2,7 +2,6 @@
 {
   _module.args.colors = import (import ./wal/pywal.nix { inherit pkgs; });
   imports = [
-    ./theme.nix
     ./hyprland.nix
     ./nvim/nvim.nix
     ./tty.nix
@@ -11,6 +10,7 @@
     ./ideavim.nix
     ./waybar/waybar.nix
     ./niri.nix
+    ./gtk.nix
     ./qt/qt.nix
   ];
 
