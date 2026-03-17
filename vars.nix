@@ -4,7 +4,7 @@
       monitor=DP-1,3440x1440@144,auto-left,1,vrr,2
       monitor=DP-2,1920x1080@60,auto-right,1
     '';
-    autoStart = "waybar & hyprpaper & discord & keepassxc & kdeconnect-indicator";
+    autoStart = "waybar & hyprpaper & sleep 1 && discord & keepassxc & kdeconnect-indicator";
     workspaceRules = "workspace = 5, monitor:DP-2, default:true";
     blur = "true";
     shadow = "true";
@@ -15,7 +15,7 @@
     monitor = ''
       monitor=eDP-1,2256x1504@60,auto,1.333333
     '';
-    autoStart = "waybar & hyprpaper & keepassxc & kdeconnect-indicator";
+    autoStart = "waybar & hyprpaper & sleep 1 && keepassxc & kdeconnect-indicator";
     workspaceRules = "";
     blur = "true";
     shadow = "false";

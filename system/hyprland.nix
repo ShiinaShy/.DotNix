@@ -36,8 +36,6 @@
   environment.systemPackages = with pkgs; [
     glib #maybe some day i find out why past me added it here :3c
     waybar # not edible qwq
-    pywal16 # colors from wallpaper
-    imagemagick #for pywal16
     hyprpaper # wallpaper
     rofi # programm launcher
     xdg-desktop-portal-gtk # i dunno o.o

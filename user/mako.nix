@@ -1,10 +1,7 @@
-{...}:
+{ colors, ...}:
 {
   home-manager.users.shiina = {...}: {
     home.file.".config/mako/config".text = ''
-      # Include Pywal to set Font color
-      include=~/.cache/wal/colors-mako
-
       # Behaviour
       sort=-time
       layer=overlay
@@ -21,6 +18,10 @@
       max-icon-size=64
       default-timeout=5000
       ignore-timeout=1
+
+      # Colors
+      text-color=${colors.color14}
+      progress-color=over ${colors.color11}
     '';
   };
 }

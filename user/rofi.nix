@@ -1,14 +1,12 @@
-{...}:
+{ colors, ...}:
 {
   home-manager.users.shiina = {...}: {
     home.file.".config/rofi/config.rasi".text = ''
-      @import "~/.cache/wal/colors-rofi"
-
       /* Main */
       * { border-width: 0px;
-          border-color: @color4;
-          lightcol: @color14;
-          darkcol: @color11;
+          border-color: ${colors.color4};
+          lightcol: ${colors.color14};
+          darkcol: ${colors.color11};
           backcol: rgba(0,0,0,0.4); /* same color as menu in waybar */
           hovercol: rgba(0,0,0,0.4);
       }
