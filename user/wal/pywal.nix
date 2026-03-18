@@ -1,3 +1,5 @@
+# This "module" runs pywal on colors.nix and outputs it.
+# It is fucking cursed
 { pkgs }:
 
 pkgs.stdenv.mkDerivation {
