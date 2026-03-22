@@ -23,4 +23,13 @@
 
   # Fingerprint
   services.fprintd.enable = true;
+
+  # Fix the horrible fancurves
+  hardware.fw-fanctrl = {
+    enable = true;
+    config = {
+      strategyOnDischarging = "laziest";
+      defaultStrategy = "medium";
+    };
+  };
 }
