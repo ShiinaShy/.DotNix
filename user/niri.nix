@@ -30,6 +30,7 @@ in {
           touchpad {
               tap
               natural-scroll
+              drag-lock
           }
           mouse {
               accel-speed 0.5
