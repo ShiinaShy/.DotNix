@@ -6,6 +6,6 @@
   ];
 
   home-manager.users.shiina = { ... }: {
-    home.stateVersion = "26.05";
+    home.stateVersion = "23.11";
   };
 }
