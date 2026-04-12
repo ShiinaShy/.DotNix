@@ -7,8 +7,8 @@
     zls
     nixd
     # Java qwq
-    jetbrains.idea
-    jdk21
+    # jetbrains.idea
+    # jdk21
     # Typst
     tinymist
     websocat
