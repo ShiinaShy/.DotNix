@@ -1,7 +1,7 @@
 # GTK Config
 { pkgs, colors, ...}:
 {
-  home-manager.users.shiina = {config, ...}:
+  home-manager.users.shiina = {...}:
     let
       adw-color = ''
         @define-color window_bg_color ${colors.background};
