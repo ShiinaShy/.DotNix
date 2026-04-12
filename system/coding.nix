@@ -6,9 +6,6 @@
     zig
     zls
     nixd
-    # Java qwq
-    jetbrains.idea
-    jdk21
     # Typst
     tinymist
     websocat
