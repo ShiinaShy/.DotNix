@@ -10,13 +10,7 @@
   # Enable gnome-keyring
   services.gnome.gnome-keyring.enable = true;
   security.pam.sshAgentAuth.enable = true;
-  # Set ssh config
-  programs.ssh.extraConfig = ''
-    Host github.com
-    IdentityFile ~/.ssh/github
-    Host gitlab.kit.edu
-    IdentityFile ~/.ssh/KITlab
-  '';
+
   # Enable zsh
   programs.zsh.enable = true;
 
