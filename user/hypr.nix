@@ -104,7 +104,7 @@
     home.file.".config/hypr/hyprpaper.conf".text = ''
       wallpaper {
           monitor = 
-          path = /home/shiina/Images/wallpaper.png
+          path = /home/shiina/.DotNix/user/wallpaper/fox.png
           fit_mode = cover
       }
       splash = false
