@@ -2,7 +2,7 @@
 {
   _module.args.colors = import (import ./wal/pywal.nix { inherit pkgs; });
   imports = [
-    ./hyprland.nix
+    ./hypr.nix
     ./nvim/nvim.nix
     ./tty.nix
     ./rofi.nix

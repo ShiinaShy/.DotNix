@@ -1,18 +1,12 @@
-{pkgs, vars, colors, ...}:
+{vars, colors, ...}:
 let
-  mcMojave = import ./mc-mojave-cursor.nix { inherit pkgs; };
-  bibata = import ./bibata-cursor.nix { inherit pkgs; };
-
   # Device specific variables
   monitor = vars.monitor;
   autoStart = vars.autoStart;
   workspaceRules = vars.workspaceRules;
-  blur = vars.blur;
-  shadow = vars.shadow;
-  vfr = vars.vfr;
-  suspendType = vars.suspendType;
 
-  cursorTheme = "bibata";
+  cursorTheme = "Bibata-Modern-Classic";
+  cursorSize = "24";
   mainMod = "mod";
   terminal = "alacritty";
   fileManager = "nemo";
@@ -40,19 +34,11 @@ in {
           focus-follows-mouse max-scroll-amount="0%"
       }
 
-      output "DP-1" {
-          mode "3440x1440@144"
-          //variable-refresh-rate
-          position x=-3440 y=-160
-      }
-      output "DP-2" {
-          mode "1920x1080@60"
-          position x=0 y=0
-      }
+      ${monitor}
 
       cursor {
-          xcursor-theme "Bibata-Modern-Classic" 
-          xcursor-size 24
+          xcursor-theme "${cursorTheme}" 
+          xcursor-size ${cursorSize} 
       }
 
       spawn-sh-at-startup "${autoStart}"
