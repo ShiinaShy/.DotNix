@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, ... }@inputs:
     let
       varsConfig = import ./vars.nix;
     in {
@@ -24,8 +24,7 @@
           };
           modules = [
             ./deskbottom/configuration.nix
-            ./user/home.nix
-            # ./system/mathematica.nix
+            ./deskbottom/home.nix
             inputs.home-manager.nixosModules.default
           ];
         };
@@ -38,8 +37,7 @@
        	modules = [
        	  inputs.nixos-hardware.nixosModules.framework-13-7040-amd
        	  ./lapbottom/configuration.nix
-          # ./system/mathematica.nix
-       	  ./user/home.nix
+       	  ./lapbottom/home.nix
           inputs.home-manager.nixosModules.default
        	];
       };

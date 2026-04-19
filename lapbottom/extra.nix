@@ -7,7 +7,9 @@
   powerManagement.enable = true;
   powerManagement.powertop.enable = true;
   services.power-profiles-daemon.enable=true; # for waybar
-  systemd.sleep.extraConfig = "HibernateDelaySec=120m"; # uspend-then-hibernate delay
+  systemd.sleep.settings.Sleep = {
+    HibernateDelaySec = "120m"; # uspend-then-hibernate delay
+  };
 
   # Enable firmware updates
   services.fwupd.enable = true;
@@ -21,4 +23,13 @@
 
   # Fingerprint
   services.fprintd.enable = true;
+
+  # Fix the horrible fancurves
+  hardware.fw-fanctrl = {
+    enable = true;
+    config = {
+      strategyOnDischarging = "laziest";
+      defaultStrategy = "medium";
+    };
+  };
 }

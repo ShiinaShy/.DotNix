@@ -1,17 +1,17 @@
-{ inputs, ...}:
+{ pkgs, ... }:
 {
+  _module.args.colors = import (import ./wal/pywal.nix { inherit pkgs; });
   imports = [
-    inputs.home-manager.nixosModules.default
-    ./theme.nix
-    ./hyprland.nix
+    ./hypr.nix
     ./nvim/nvim.nix
     ./tty.nix
     ./rofi.nix
     ./mako.nix
     ./ideavim.nix
     ./waybar/waybar.nix
-    ./wal/wal.nix
     ./niri.nix
+    ./gtk.nix
+    ./qt/qt.nix
   ];
 
   home-manager.users.shiina = { ... }: {
@@ -48,8 +48,5 @@
       source =  ./gimp;
       recursive = true;
     };
-
-    # The state version is required and should stay at the version you originally installed.
-    home.stateVersion = "23.11";
   };
 }

@@ -1,25 +1,24 @@
 {
   deskbottom = {
     monitor = ''
-      monitor=DP-1,3440x1440@144,auto-left,1,vrr,2
-      monitor=DP-2,1920x1080@60,auto-right,1
+      output "DP-1" {
+          mode "3440x1440@144"
+          //variable-refresh-rate
+          position x=-3440 y=-160
+      }
+      output "DP-2" {
+          mode "1920x1080@60"
+          position x=0 y=0
+      }
     '';
-    autoStart = "waybar & hyprpaper & discord & keepassxc & kdeconnect-indicator";
-    workspaceRules = "workspace = 5, monitor:DP-2, default:true";
-    blur = "true";
-    shadow = "true";
-    vfr = "false";
-    suspendType = "suspend";
+    autoStart = "waybar & hyprpaper & sleep 1 && discord & keepassxc & kdeconnect-indicator";
   };
   lapbottom = {
     monitor = ''
-      monitor=eDP-1,2256x1504@60,auto,1.333333
+      output = "eDP-1" {
+          mode "2256x1504@60"
+      }
     '';
-    autoStart = "waybar & hyprpaper & keepassxc & kdeconnect-indicator";
-    workspaceRules = "";
-    blur = "true";
-    shadow = "false";
-    vfr = "true";
-    suspendType = "suspend-then-hibernate";
+    autoStart = "waybar & hyprpaper & sleep 1 && keepassxc & kdeconnect-indicator";
   };
 }

@@ -21,12 +21,14 @@
       "modules-left": [
         "custom/appmenu",
         "wlr/taskbar",
-        "hyprland/window"
+        "hyprland/window",
+        "niri/window"
       ],
 
       // Modules Center
       "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "niri/workspaces"
       ],
       // Modules Right
       "modules-right": [

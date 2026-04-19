@@ -1,4 +1,4 @@
-{...}:
+{ colors, ... }:
 let
   fontSize = "15px";
   borderRad = "10px";
@@ -12,12 +12,10 @@ in {
   home-manager.users.shiina = {...}: {
     home.file.".config/waybar/style.css".text = ''
       /* Import PyWal Colors */
-      @import '../../.cache/wal/colors-waybar.css';
-
-      @define-color lightcol @color14;
-      @define-color darkcol @color11;
-      @define-color backcol alpha(@background, ${alpha});
-      @define-color hovercol alpha(@color3, 0.3);
+      @define-color lightcol ${colors.color14};
+      @define-color darkcol ${colors.color11};
+      @define-color backcol alpha(${colors.background}, ${alpha});
+      @define-color hovercol alpha(${colors.color3}, 0.3);
 
 
       /* General */
@@ -101,7 +99,7 @@ in {
       }
       #workspaces button {
           font-size: 20px;
-          padding: 0px 5px;
+          padding: 0px 5px 0px 0px;
           color: alpha(@darkcol, .3);
           text-shadow: 0px 0px 2px alpha(@darkcol, .3);
           transition: all .2s ease;

@@ -6,7 +6,7 @@
     [
       ./hardware-configuration.nix
       ./extra.nix
-      ../system/hyprland.nix
+      ../system/desktop.nix
       ../system/utils.nix
       ../system/programms.nix
       ../system/coding.nix
@@ -60,5 +60,5 @@
 
   nix.settings.experimental-features  = ["nix-command" "flakes"];
   # Store state version (no touchy!)
-  system.stateVersion = "23.11"; 
+  system.stateVersion = "25.11"; 
 }

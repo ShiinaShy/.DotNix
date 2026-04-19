@@ -3,8 +3,8 @@
 {
   home-manager.users.shiina = {...}:
   let
-    toLua = str: "lua << EOF\n${str}\nEOF\n";
-    fileToLua = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+    toLua = str: "${str}";
+    fileToLua = file: "${builtins.readFile file}";
   in
   {
     programs.neovim = {
