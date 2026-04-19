@@ -6,7 +6,7 @@
     [ 
       ./hardware-configuration.nix
       ./extra.nix
-      ../system/hyprland.nix
+      ../system/desktop.nix
       ../system/utils.nix
       ../system/programms.nix
       ../system/coding.nix
