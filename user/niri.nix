@@ -3,7 +3,6 @@ let
   # Device specific variables
   monitor = vars.monitor;
   autoStart = vars.autoStart;
-  workspaceRules = vars.workspaceRules;
 
   cursorTheme = "Bibata-Modern-Classic";
   cursorSize = "24";
