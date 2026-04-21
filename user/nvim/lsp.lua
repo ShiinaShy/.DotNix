@@ -47,14 +47,11 @@ vim.diagnostic.config({
     severity_sort = true,
 })
 
-vim.lsp.enable('nixd');
-vim.lsp.config('nixd', {
-    on_attach = on_attach,
-    capabilities = capabilities,
-});
-vim.lsp.enable('zls');
-vim.lsp.config('zls', {
-    on_attach = on_attach,
-    capabilities = capabilities,
-});
-vim.lsp.enable('tinymist');
+local languageServers = {'nixd', 'zls', 'tinymist', 'jdtls'}
+for _, lsp in ipairs(languageServers) do
+    vim.lsp.enable(lsp);
+    vim.lsp.config(lsp, {
+        on_attach = on_attach,
+        capabilities = capabilities,
+    });
+end

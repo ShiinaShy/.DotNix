@@ -49,6 +49,9 @@
 
         " Evil save
         nnoremap <C-s> <cmd>w<cr>
+
+        " JAVA DELETE AS SOON AS POSSIBLE I HATE JAVA
+        au BufWritePost * lua require('lint').try_lint()
       '';
 
       plugins = with pkgs.vimPlugins; [
@@ -107,6 +110,7 @@
           p.tree-sitter-nix
           p.tree-sitter-zig
           p.tree-sitter-typst
+          p.tree-sitter-java
         ]))
         
         # Typst
@@ -119,11 +123,28 @@
               },
           }'';
         }
+
+        # Java
+        nvim-jdtls
+        {
+          plugin = nvim-lint;
+          config = toLua ''
+            require('lint.linters.checkstyle').config_file = '/home/shiina/Uni/SS26/SWT1/swt1-checkstyle.xml'
+            require('lint').linters_by_ft = {
+              java = {'checkstyle'}
+            }
+          '';
+        }
       ];
     };
 
     # Filetype Plugin Config
     home.file.".config/nvim/ftplugin/nix.vim".text = ''
+      setlocal expandtab
+      setlocal tabstop=2
+      setlocal shiftwidth=2
+    '';
+    home.file.".config/nvim/ftplugin/java.vim".text = ''
       setlocal expandtab
       setlocal tabstop=2
       setlocal shiftwidth=2

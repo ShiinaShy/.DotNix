@@ -10,5 +10,8 @@
     tinymist
     websocat
     typst
+    # Java
+    jdt-language-server
+    checkstyle
   ];
 }
