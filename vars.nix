@@ -15,7 +15,7 @@
   };
   lapbottom = {
     monitor = ''
-      output = "eDP-1" {
+      output "eDP-1" {
           mode "2256x1504@60"
       }
     '';
