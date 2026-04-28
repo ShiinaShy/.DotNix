@@ -248,9 +248,29 @@ in {
           match app-id=r#"^org\.gnome\.World\.Secrets$"#
 
           block-out-from "screen-capture"
+      }
+      window-rule {
+          match title="KeePassXC - Browser Access Request" 
+          match title="Unlock Database - KeePassXC"
+          open-floating true
+      }
 
-          // Use this instead if you want them visible on third-party screenshot tools.
-          // block-out-from "screencast"
+      window-rule {
+          match app-id="Alacritty"
+
+          background-effect {
+              xray true 
+              blur true
+          }
+      }
+
+      window-rule {
+          popups {
+              background-effect {
+                  xray true
+                  blur true
+              }
+          }
       }
 
       layer-rule {
@@ -258,18 +278,14 @@ in {
           place-within-backdrop true
       }
 
-      // Open the Firefox picture-in-picture player as floating by default.
-      window-rule {
-          // This app-id regular expression will work for both:
-          // - host Firefox (app-id is "firefox")
-          // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-          match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-          open-floating true
-      }
-      window-rule {
-          match title="KeePassXC - Browser Access Request" 
-          match title="Unlock Database - KeePassXC"
-          open-floating true
+      layer-rule {
+          match namespace="^rofi$"
+
+          baba-is-float true
+          background-effect {
+              xray true 
+              blur true
+          }
       }
     '';
   };

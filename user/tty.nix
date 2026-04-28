@@ -30,7 +30,7 @@
         settings = {
           window.padding = { x = 10; y = 5; };
           # general.import = ["~/.cache/wal/colors-alacritty.toml"];
-          window.opacity = 0.8;
+          window.opacity = 0.7;
           terminal.shell.program = "zsh";
           font.normal.family = "Profont IIx Nerd Font Mono"; 
           colors = {
