@@ -14,7 +14,7 @@
     xwayland-satellite
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
-    hyprpaper
+    wbg
     hyprlock
   ];
 }

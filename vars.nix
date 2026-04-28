@@ -11,7 +11,7 @@
           position x=0 y=0
       }
     '';
-    autoStart = "waybar & hyprpaper & sleep 1 && discord & keepassxc & kdeconnect-indicator";
+    autoStart = "waybar & wbg -s ~/.DotNix/user/wallpaper/fox.png & sleep 1 && discord & keepassxc & kdeconnect-indicator";
   };
   lapbottom = {
     monitor = ''
@@ -19,6 +19,6 @@
           mode "2256x1504@60"
       }
     '';
-    autoStart = "waybar & hyprpaper & sleep 1 && keepassxc & kdeconnect-indicator";
+    autoStart = "waybar & wbg -s ~/.DotNix/user/wallpaper/fox.png & sleep 1 && keepassxc & kdeconnect-indicator";
   };
 }
