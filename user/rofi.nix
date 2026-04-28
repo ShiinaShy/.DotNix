@@ -7,7 +7,7 @@
           border-color: ${colors.color4};
           lightcol: ${colors.color14};
           darkcol: ${colors.color11};
-          backcol: rgba(0,0,0,0.4); /* same color as menu in waybar */
+          backcol: rgba(0,0,0,0.6); /* same color as menu in waybar */
           hovercol: rgba(0,0,0,0.4);
       }
 
