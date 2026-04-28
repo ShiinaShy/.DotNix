@@ -264,15 +264,6 @@ in {
           }
       }
 
-      window-rule {
-          popups {
-              background-effect {
-                  xray true
-                  blur true
-              }
-          }
-      }
-
       layer-rule {
           match namespace="^rofi$"
 
