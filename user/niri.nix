@@ -274,11 +274,6 @@ in {
       }
 
       layer-rule {
-          match namespace="^hyprpaper$"
-          place-within-backdrop true
-      }
-
-      layer-rule {
           match namespace="^rofi$"
 
           baba-is-float true
