@@ -27,8 +27,8 @@
     rofi
     mako
     xviewer
-    nemo-with-extensions
     thunar
+    tumbler
     kdePackages.dolphin
   ];
 
