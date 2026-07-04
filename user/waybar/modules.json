@@ -19,30 +19,11 @@
     },
 
     // Hyprland Window
-    "hyprland/window": {},
     "niri/window": {},
 
 // --- Modules Center ---
 
     // Workspaces
-    "hyprland/workspaces": {
-        "on-click": "activate",
-        "active-only": false,
-        "all-outputs": true,
-        "format": "",
-        "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
-        },
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
-        }
-    },
     "niri/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -111,9 +92,9 @@
         "menu-actions": {
             "poweroff": "poweroff",
             "reboot": "reboot",
-            "suspend": "hyprlock & disown && systemctl suspend",
-            "hibernate": "hyprlock & disown && systemctl hibernate",
-            "lock": "hyprlock"
+            "suspend": "swaylock & disown && systemctl suspend",
+            "hibernate": "swaylock & disown && systemctl hibernate",
+            "lock": "swaylock"
         }
     },
 
