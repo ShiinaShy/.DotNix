@@ -225,6 +225,10 @@ in {
           }
       }
 
+      switch-events {
+          lid-close { spawn "swaylock"; }
+      }
+
       hotkey-overlay {
           skip-at-startup
       }
