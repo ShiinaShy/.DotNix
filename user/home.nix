@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, wallpaper, ... }:
 {
   _module.args.colors = import (import ./wal/pywal.nix { inherit pkgs; });
   imports = [
-    ./hypr.nix
+    ./swaylock.nix
     ./nvim/nvim.nix
     ./tty.nix
     ./rofi.nix
@@ -43,8 +43,12 @@
       };
     };
 
+    # Place wallpaper in config
+    home.file.".config/wallpaper.png".source = ./wallpaper/fox.png; 
+    home.file.".config/blur.png".source = (import ./wallpaper/blur.nix { inherit pkgs wallpaper; });
+
     # Set gimp configs in a hacky way :3c
-    home.file.".config/GIMP/3.0" = {
+    home.file.".config/GIMP/3.2" = {
       source =  ./gimp;
       recursive = true;
     };
