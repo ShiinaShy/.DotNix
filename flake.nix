@@ -21,6 +21,7 @@
           specialArgs = {
             inherit inputs;
             vars = varsConfig.deskbottom;
+            wallpaper = varsConfig.wallpaper;
           };
           modules = [
             ./deskbottom/configuration.nix
@@ -33,6 +34,7 @@
        	specialArgs = {
        	  inherit inputs;
        	  vars = varsConfig.lapbottom;
+          wallpaper = varsConfig.wallpaper;
        	};
        	modules = [
        	  inputs.nixos-hardware.nixosModules.framework-13-7040-amd
