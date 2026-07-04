@@ -2,14 +2,15 @@
 # 
 # This is your personal gimprc file.  Any variable defined in this file takes
 # precedence over the value defined in the system-wide gimprc:
-# /nix/store/g12514rxkdwdcz7dflj8jxbq3187jk53-gimp-3.0.6/etc/gimp/3.0/gimprc
+# /nix/store/251cqjs4q8lfav6yfwg5ag5abzipbjws-gimp-3.2.4/etc/gimp/3.0/gimprc
 # Most values can be set within GIMP by changing some options in the
 # Preferences dialog.
 
 (prev-language "German")
-(config-version "3.0.6")
+(config-version "3.2.4")
 (import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-raw-placeholder/file-raw-placeholder")
-(monitor-yresolution 95)
+(monitor-xresolution 136)
+(monitor-yresolution 134)
 (theme "System")
 (show-welcome-dialog no)
 (color-profile-policy keep)

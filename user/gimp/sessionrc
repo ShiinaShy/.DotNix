@@ -12,11 +12,11 @@
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
     (position 0 0)
-    (size 2083 1372)
-    (monitor 1)
+    (size 1504 959)
+    (monitor 0)
     (open-on-exit)
     (aux-info
-        (left-docks-width "260")
+        (left-docks-width "391")
         (right-docks-width "274")
         (maximized "yes"))
     (gimp-toolbox
@@ -65,11 +65,6 @@
                 (tab-style icon)
                 (preview-size 32)
                 (aux-info
-                    (show-button-bar "true")))
-            (dockable "gimp-vectors-list"
-                (tab-style icon)
-                (preview-size 32)
-                (aux-info
                     (show-button-bar "true"))))))
 (session-info "toplevel"
     (factory-entry "gimp-image-new-dialog")
@@ -87,8 +82,7 @@
 (session-info "toplevel"
     (factory-entry "gimp-preferences-dialog")
     (position 0 0)
-    (size 1118 1325)
-    (monitor 1))
+    (size 1118 1325))
 
 (hide-docks no)
 (single-window-mode yes)
