@@ -28,6 +28,7 @@
     mako
     xviewer
     nemo-with-extensions
+    thunar
     kdePackages.dolphin
   ];
 

@@ -8,7 +8,7 @@ let
   cursorSize = "24";
   mainMod = "mod";
   terminal = "alacritty";
-  fileManager = "nemo";
+  fileManager = "thunar";
   browser = "librewolf";
   menu = "\"rofi\" \"-show\" \"drun\"";
 in {
