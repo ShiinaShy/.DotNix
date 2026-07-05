@@ -16,5 +16,6 @@
     xdg-desktop-portal-gnome
     wbg
     swaylock
+    wtype # for fox emoij
   ];
 }

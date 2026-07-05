@@ -122,6 +122,9 @@ in {
           ${mainMod}+V       { toggle-window-floating; }
           ${mainMod}+Shift+V { switch-focus-between-floating-and-tiling; }
 
+          // Insert foppie!
+          ${mainMod}+Shift+f { spawn-sh "wtype 🦊"; }
+
           Print { screenshot; }
           Ctrl+Print { screenshot-screen; }
           Alt+Print { screenshot-window; }
