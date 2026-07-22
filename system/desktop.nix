@@ -36,6 +36,7 @@
     font-awesome
     nerd-fonts.fira-code
     nerd-fonts.profont
+    open-dyslexic
   ];
 
 }
