@@ -1,15 +1,17 @@
 # Extra settings only required for deskbottom
-{...}:
+{ pkgs, ... }:
 
 {
   # Powermanagement
   boot.kernelParams = [ "amd_pstate=active" ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   powerManagement.enable = true;
   services.power-profiles-daemon.enable=true; # for waybar
 
   # Enable NTFS Support
   boot.supportedFilesystems = ["ntfs"];
 
+  # FlokiNET DNS
   networking.nameservers = [
     "185.246.188.51"
     "37.156.68.20"
