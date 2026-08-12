@@ -7,7 +7,6 @@
     ./tty.nix
     ./rofi.nix
     ./mako.nix
-    ./ideavim.nix
     ./waybar/waybar.nix
     ./niri.nix
     ./gtk.nix
