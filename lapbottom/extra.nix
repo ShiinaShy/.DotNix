@@ -23,6 +23,7 @@
 
   # Fingerprint
   services.fprintd.enable = true;
+  services.upower.enable = true; # for ironbar
 
   # Fix the horrible fancurves
   hardware.fw-fanctrl = {
