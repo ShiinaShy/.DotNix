@@ -272,9 +272,39 @@ in {
       }
 
       layer-rule {
+          match namespace="ironbar"
+
+          background-effect {
+              xray true 
+              blur true
+          }
+
+      }
+
+      layer-rule {
+          popups {
+              geometry-corner-radius 8
+              background-effect {
+                  xray true
+                  blur true
+              }
+          }
+      }
+      window-rule {
+           popups {
+              geometry-corner-radius 8
+              background-effect {
+                  xray true
+                  blur true
+              }
+          }
+      }
+
+      layer-rule {
           match namespace="^rofi$"
 
           baba-is-float true
+          geometry-corner-radius 10 
           background-effect {
               xray true 
               blur true
