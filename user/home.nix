@@ -7,7 +7,7 @@
     ./tty.nix
     ./rofi.nix
     ./mako.nix
-    ./waybar/waybar.nix
+    ./ironbar.nix
     ./niri.nix
     ./gtk.nix
     ./qt/qt.nix

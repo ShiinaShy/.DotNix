@@ -8,17 +8,9 @@ in
 {
   home-manager.users.shiina = {...}: {
     home.file.".config/ironbar/style.css".text = ''
-      :root {
-          background-color: rgb(from ${colors.background} r g b / 20%);
-      }
-
-      * {
-          font-family: Profont IIx Nerd Font;
-      }
-
-      popover contents {
-          border-radius: 8px;
-      }
+      :root { background-color: rgb(from ${colors.background} r g b / 20%); }
+      * { font-family: Profont IIx Nerd Font; }
+      popover contents { border-radius: 8px; }
 
       box, button, label {
           background-color: transparent;
@@ -41,9 +33,9 @@ in
       }
 
       .launcher {
-          border-radius: var(--radius);
-          margin: var(--margin-tb) .5em;
-          background-color: rgb(from var(--background) r g b / ${trans});
+          border-radius: ${radius};
+          margin: ${margin-tb} .5em;
+          background-color: rgb(from ${colors.background} r g b / ${trans});
       }
       .launcher .item.focused {
           margin: 0;
@@ -51,18 +43,18 @@ in
       }
 
       .focused {
-          border-radius: var(--radius);
-          margin: var(--margin-tb) .5em;
+          border-radius: ${radius};
+          margin: ${margin-tb} .5em;
           padding: 0 .5em;
-          background-color: rgb(from var(--background) r g b / ${trans});
+          background-color: rgb(from ${colors.background} r g b / ${trans});
 
           font-weight: bold;
       }
 
       #bar #end {
-          border-radius: var(--radius);
-          margin: var(--margin-tb) .5em;
-          background-color: rgb(from var(--background) r g b / ${trans});
+          border-radius: ${radius};
+          margin: ${margin-tb} .5em;
+          background-color: rgb(from ${colors.background} r g b / ${trans});
       }
 
       .volume {}
@@ -79,7 +71,7 @@ in
       .clock {
           font-weight: bold;
       }
-      .popup-cltext-box-trimock .calendar {
+      .popup-clock .calendar {
           background: transparent;
       }
       .popup-clock .calendar-clock {
@@ -177,7 +169,7 @@ in
       [[end]]
       type = "battery"
       show_label = false
-      tooltip = '''{{upower --battery | grep -oP 'percentage:\s+\K\d+%'}} | {{powerprofilesctl get}}'''
+      tooltip = ''''''{{upower --battery | grep -oP 'percentage:\s+\K\d+%'}} | {{powerprofilesctl get}}''''''
 
       [[end]]
       type = "network_manager"
@@ -204,33 +196,33 @@ in
       type = 'box'
       [[end.popup.widgets.widgets]]
       class = 'power-eco'
-      label = '''<span></span>'''
+      label = "<span></span>"
       on_click = '!powerprofilesctl set power-saver'
       type = 'button'
       [[end.popup.widgets.widgets]]
       class = 'power-bal'
-      label = '''<span></span>'''
+      label = "<span></span>"
       on_click = '!powerprofilesctl set balanced'
       type = 'button'
       [[end.popup.widgets.widgets]]
       class = 'power-per'
-      label = '''<span></span>'''
+      label = "<span></span>"
       on_click = '!powerprofilesctl set performance'
       type = 'button'
       [[end.popup.widgets]]
-      label = '''<span> Poweroff</span>'''
+      label = "<span> Poweroff</span>"
       on_click = '!shutdown now'
       type = 'button'
       [[end.popup.widgets]]
-      label = '''<span> Reboot</span>'''
+      label = "<span> Reboot</span>"
       on_click = '!reboot'
       type = 'button'
       [[end.popup.widgets]]
-      label = '''<span>󰒲 Suspend</span>'''
+      label = "<span>󰒲 Suspend</span>"
       on_click = '!swaylock & systemctl suspend'
       type = 'button'
       [[end.popup.widgets]]
-      label = '''<span> Lock</span>'''
+      label = "<span> Lock</span>"
       on_click = '!swaylock'
       type = 'button'
     '';
