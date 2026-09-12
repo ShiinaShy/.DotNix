@@ -13,7 +13,7 @@
           position x=0 y=0
       }
     '';
-    autoStart = "waybar & wbg -s ~/.config/wallpaper.png & sleep 1 && discord & keepassxc & kdeconnect-indicator";
+    autoStart = "ironbar & wbg -s ~/.config/wallpaper.png & sleep 1 && discord & keepassxc & kdeconnect-indicator";
   };
   lapbottom = {
     monitor = ''
@@ -21,6 +21,6 @@
           mode "2256x1504@60"
       }
     '';
-    autoStart = "waybar & wbg -s ~/.config/wallpaper.png & sleep 1 && keepassxc & kdeconnect-indicator";
+    autoStart = "ironbar & wbg -s ~/.config/wallpaper.png & sleep 1 && keepassxc & kdeconnect-indicator";
   };
 }
